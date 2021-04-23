@@ -73,11 +73,9 @@ $grey: #bababa;
 }
 
 section {
-  @media all and (max-width: 1367px) {
-    overflow: hidden;
-  }
+  overflow: hidden;
 
-  &.padd {
+  .padd {
     padding-left: 44px;
     padding-right: 44px;
   }
@@ -222,7 +220,6 @@ p.text {
 .one_article {
   border-bottom: 1px solid #fff;
   height: 155px;
-  display: block;
 
   .date,
   .tag {
@@ -231,18 +228,15 @@ p.text {
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 10px;
-    cursor: pointer;
   }
 
   h3 {
     margin-bottom: 10px;
-    cursor: pointer;
   }
 
   .text {
     color: #fff;
     max-width: 700px;
-    cursor: pointer;
   }
 
   .link {
@@ -258,7 +252,6 @@ p.text {
     border-radius: 50%;
     border: 1px solid #ffffff;
     background: url("../img/icons/arrow.svg") no-repeat center / 12px;
-    cursor: pointer;
 
     &:hover {
       opacity: 1;
@@ -756,7 +749,7 @@ footer {
         }
 
         path {
-          fill: $blue;
+          fill: #fff;
           transition: fill 360ms;
         }
       }
