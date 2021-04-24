@@ -1508,30 +1508,6 @@ footer {
         margin-top: 36px;
       }
     }
-
-    &.with_numders {
-      counter-reset: (list);
-      li {
-        counter-increment: (list);
-
-        &::before {
-          background: none;
-          content: counter(list);
-          color: $red;
-          font-size: 22px;
-          font-weight: 700;
-          line-height: 22px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          width: 40px;
-          height: 40px;
-          border: 1px solid $blue;
-          background-color: #ffffff;
-        }
-      }
-    }
   }
 
   .small_img {
@@ -1566,50 +1542,5 @@ footer {
 
   article {
     margin-top: 75px;
-  }
-
-  h4 {
-    color: $red;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 22px;
-    margin-bottom: 40px;
-    margin-top: 100px;
-  }
-
-  .share_article {
-    margin-top: 100px;
-    margin-bottom: 150px;
-    text-align: center;
-
-    p {
-      display: block;
-      margin-bottom: 20px;
-      color: $red;
-      font-size: 25px;
-      font-weight: 700;
-      line-height: 25px;
-      text-align: center;
-    }
-
-    a {
-      display: inline-block;
-      border-radius: 50%;
-      width: 46px;
-      height: 46px;
-      border: 2px solid $blue;
-
-      & + a {
-        margin-left: 40px;
-      }
-    }
-  }
-
-  & + #blog {
-    padding-bottom: 300px;
-
-    h2 {
-      margin-bottom: 54px;
-    }
   }
 }

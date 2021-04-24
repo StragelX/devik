@@ -14,15 +14,4 @@ $( document ).ready(function() {
             $('.counter-number').countTo();
         });
     }
-
-    $('.modal_overlay .close, .modal_overlay .btn_color').click(function(){
-        $(this).closest('.modal_overlay').removeClass('active');
-        $(this).closest('.modal').removeClass('active');
-        $('body').removeClass('no_scroll');
-    })
-
-    $('#blog .btn_transparent.tag').click(function(){
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-    })
 });

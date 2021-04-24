@@ -1593,7 +1593,6 @@ footer {
     }
 
     a {
-      display: inline-block;
       border-radius: 50%;
       width: 46px;
       height: 46px;
@@ -1602,14 +1601,6 @@ footer {
       & + a {
         margin-left: 40px;
       }
-    }
-  }
-
-  & + #blog {
-    padding-bottom: 300px;
-
-    h2 {
-      margin-bottom: 54px;
     }
   }
 }
