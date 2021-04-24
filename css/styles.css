@@ -1125,10 +1125,22 @@ h3 {
   text-align: left;
 }
 
+h4 {
+  color: #f83e46;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
 p.text {
   font-size: 14px;
   font-weight: 300;
   line-height: 21px;
+}
+
+p.text b {
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .left_rad_line {
@@ -2670,5 +2682,29 @@ footer .bottom_prat .copyright {
 
 .article + #blog h2 {
   margin-bottom: 54px;
+}
+
+#policy {
+  padding-top: 100px;
+  padding-bottom: 300px;
+}
+
+#policy h2 {
+  margin-bottom: 50px;
+}
+
+#policy .data {
+  margin-bottom: 20px;
+  color: #00334c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+#policy .text {
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 /*# sourceMappingURL=styles.css.map */
