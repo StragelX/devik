@@ -20,9 +20,4 @@ $( document ).ready(function() {
         $(this).closest('.modal').removeClass('active');
         $('body').removeClass('no_scroll');
     })
-
-    $('#blog .btn_transparent.tag').click(function(){
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-    })
 });

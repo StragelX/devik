@@ -154,11 +154,6 @@ p.text {
   font-size: 14px;
   font-weight: 300;
   line-height: 21px;
-
-  b {
-    font-size: 16px;
-    font-weight: 700;
-  }
 }
 
 .left_rad_line {
@@ -1318,11 +1313,6 @@ footer {
   #map {
     height: 808px;
     background: url("../img/map_bg.jpg") no-repeat center / cover;
-
-    iframe {
-      width: 100%;
-      height: 100%;
-    }
   }
 
   h2 {
@@ -1636,21 +1626,6 @@ footer {
   padding-bottom: 300px;
 
   h2 {
-    margin-bottom: 50px;
-  }
-
-  .data {
-    margin-bottom: 20px;
-    color: $blue;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.8px;
-    line-height: 18px;
-    text-transform: uppercase;
-  }
-
-  .text {
-    margin-top: 20px;
     margin-bottom: 50px;
   }
 }
