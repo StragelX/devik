@@ -37,6 +37,11 @@ $grid-prefix: xs s sm m;
   padding-left: $grid-padding;
   padding-right: $grid-padding;
   box-sizing: border-box;
+
+  &.no_padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 // finish grid ----------------------
