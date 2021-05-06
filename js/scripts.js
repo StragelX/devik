@@ -25,4 +25,28 @@ $( document ).ready(function() {
         $(this).siblings().removeClass('active');
         $(this).addClass('active');
     })
+
+    if ($('.clients_swiper')) {
+        const clients_swiper = new Swiper('.clients_swiper', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+    
+            navigation: {
+              nextEl: '.clients_swiper_prev',
+              prevEl: '.clients_swiper_next',
+            },
+        });
+    }
+    
+    if ($('.clients_logos_swiper')) {
+        const clients_logos_swiper = new Swiper('.clients_logos_swiper', {
+            slidesPerView: 6,
+            loop: true,
+            autoplay: {
+              delay: 500,
+              disableOnInteraction: false,
+            },
+        });
+    }
 });

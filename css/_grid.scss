@@ -42,6 +42,14 @@ $grid-prefix: xs s sm m;
     padding-left: 0;
     padding-right: 0;
   }
+
+  &.no_padding_left {
+    padding-left: 0;
+  }
+
+  &.no_padding_right {
+    padding-right: 0;
+  }
 }
 
 // finish grid ----------------------
