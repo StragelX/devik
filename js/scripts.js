@@ -77,4 +77,24 @@ $( document ).ready(function() {
             autoplay: true
         });
     }
+
+    if ($('.services_swiper')) {
+        const services_swiper = new Swiper('.services_swiper', {
+            slidesPerView: 3,
+            loop: true,
+            spaceBetween: 20,
+    
+            navigation: {
+              nextEl: '.clients_swiper_prev',
+              prevEl: '.clients_swiper_next',
+            },
+        });
+    }
+
+    // services_swiper
+
+    if ( $('#custom_scroll_bar') ) {
+        new SimpleBar(document.getElementById('custom_scroll_bar'));
+    }
+    
 });
