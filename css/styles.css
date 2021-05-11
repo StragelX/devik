@@ -2919,8 +2919,23 @@ footer .bottom_prat .copyright {
 }
 
 #policy .text {
+  color: #303d43;
   margin-top: 20px;
   margin-bottom: 50px;
+}
+
+#policy a {
+  color: #00334c;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 1.8px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+#policy a:hover {
+  text-decoration: none;
 }
 
 #who_we_are_about {
@@ -3154,6 +3169,7 @@ footer .bottom_prat .copyright {
 
 #sertificates .text {
   margin-bottom: 24px;
+  padding-left: 25px;
   color: #fff;
   margin-bottom: 50px;
 }
@@ -3599,7 +3615,7 @@ footer .bottom_prat .copyright {
 }
 
 #sitemap .links_group + .links_group {
-  margin-bottom: 45px;
+  margin-top: 45px;
 }
 
 #sitemap .links_group:before {

@@ -2089,8 +2089,23 @@ footer {
   }
 
   .text {
+    color: $dark;
     margin-top: 20px;
     margin-bottom: 50px;
+  }
+
+  a {
+    color: $blue;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 1.8px;
+    text-decoration: underline;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -2331,6 +2346,7 @@ footer {
 
   .text {
     margin-bottom: 24px;
+    padding-left: 25px;
     color: #fff;
     margin-bottom: 50px;
 
@@ -2775,7 +2791,7 @@ footer {
     counter-increment: sitemap;
 
     & + .links_group {
-      margin-bottom: 45px;
+      margin-top: 45px;
     }
 
     &:before {
