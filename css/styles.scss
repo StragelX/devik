@@ -558,6 +558,7 @@ menu {
     height: 100vh;
     top: 0;
     left: 0;
+    z-index: 10;
     transition: left 500ms;
     background-color: $blue;
     box-shadow: -3px 0 9px rgba(8, 12, 25, 0.27);
@@ -699,6 +700,8 @@ menu {
     height: 100vh;
     background-color: #ffffff;
     opacity: 0.2;
+    margin-left: 65px;
+    margin-right: 65px;
   }
 
   &.active {
