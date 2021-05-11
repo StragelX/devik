@@ -2689,8 +2689,9 @@ footer {
 #error {
   height: 100vh;
   margin-left: -70px;
-  background: url("../img/road.jpg") no-repeat center / 113%;
+  background: url("../img/404_bg.jpg") no-repeat center bottom / cover;
   padding-top: 100px;
+  padding-left: 44px;
 
   @media all and (max-height: 650px) {
     padding-top: 30px;
@@ -2705,7 +2706,7 @@ footer {
     line-height: 167px;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     img {
       height: 135px;
@@ -2727,7 +2728,7 @@ footer {
     margin-bottom: 30px;
 
     @media all and (max-height: 650px) {
-      margin-bottom: 75px;
+      margin-bottom: 10px;
     }
   }
 
