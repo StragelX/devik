@@ -2041,69 +2041,6 @@ footer .bottom_prat .copyright {
   background: url("../img/icons/play.svg") no-repeat center/contain;
 }
 
-.modal_overlay {
-  z-index: 20;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: #ffffff5e;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 360ms;
-}
-
-.modal_overlay .modal {
-  padding: 75px 45px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 90%;
-  max-height: 90%;
-  background: url("../img/modal_bg.jpg") no-repeat center/cover;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 360ms;
-}
-
-.modal_overlay .modal.active {
-  opacity: 1;
-  pointer-events: all;
-  transition: opacity 360ms;
-}
-
-.modal_overlay .close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50px;
-  height: 50px;
-  background: #f83e46 url("../img/icons/close.svg") no-repeat center/18px;
-}
-
-.modal_overlay.active {
-  opacity: 1;
-  pointer-events: all;
-  transition: opacity 360ms;
-}
-
-.modal_overlay h2 {
-  color: #fff;
-}
-
-.modal_overlay .btn_color {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-}
-
-.modal_overlay #contact_us_modal h2 {
-  margin-bottom: 40px;
-  max-width: 250px;
-}
-
 .inner_banner_with_block {
   padding-top: 102px;
 }
@@ -3652,5 +3589,326 @@ footer .bottom_prat .copyright {
 
 #sitemap .links_group a + a {
   margin-top: 25px;
+}
+
+.modal_overlay {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #ffffff5e;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 360ms;
+}
+
+.modal_overlay .modal {
+  padding: 75px 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  background: url("../img/modal_bg.jpg") no-repeat center/cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 360ms;
+}
+
+.modal_overlay .modal.active {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 360ms;
+}
+
+.modal_overlay .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background: #f83e46 url("../img/icons/close.svg") no-repeat center/18px;
+}
+
+.modal_overlay.active {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 360ms;
+}
+
+.modal_overlay h2 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.modal_overlay .btn_color {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.modal_overlay .text {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.modal_overlay .input_wrap + .input_wrap {
+  margin-top: 25px;
+}
+
+.modal_overlay .label {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 21px;
+  position: absolute;
+  top: 11px;
+  left: 31px;
+  transition: top 180ms;
+  pointer-events: none;
+}
+
+.modal_overlay .text {
+  color: #ffffff;
+  padding-left: 30px;
+  margin-bottom: 3px;
+  margin-top: 0;
+}
+
+.modal_overlay input:not([type="submit"]),
+.modal_overlay textarea {
+  width: 100%;
+  padding: 15px 30px;
+  height: 45px;
+  border-radius: 23px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  background-color: transparent;
+}
+
+.modal_overlay input:not([type="submit"]):focus + .label, .modal_overlay input:not([type="submit"]).filled + .label,
+.modal_overlay textarea:focus + .label,
+.modal_overlay textarea.filled + .label {
+  top: -25px;
+  transition: top 180ms;
+}
+
+.modal_overlay input:not([type="submit"]).invalid,
+.modal_overlay textarea.invalid {
+  color: #f83e46;
+  border: 1px solid #f83e46;
+}
+
+.modal_overlay input:not([type="submit"]).invalid + .label,
+.modal_overlay textarea.invalid + .label {
+  color: #f83e46;
+  top: -25px;
+  transition: top 180ms;
+}
+
+.modal_overlay textarea {
+  resize: vertical;
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.modal_overlay .drop_wrap .selected {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 30px;
+  height: 45px;
+  border-radius: 23px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  background-color: transparent;
+}
+
+.modal_overlay .drop_wrap .selected:after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 27px;
+  width: 12px;
+  height: 12px;
+  background: url("../img/icons/drop_arrow.svg") no-repeat center/contain;
+  transform: rotate(0);
+  transition: transform 180ms;
+}
+
+.modal_overlay .drop_wrap .selected.active:after {
+  transform: rotate(180deg);
+  transition: transform 180ms;
+}
+
+.modal_overlay .drop_wrap .drop {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 18px 30px 25px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  background-color: #00334c;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms;
+}
+
+.modal_overlay .drop_wrap .drop.active {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 180ms;
+}
+
+.modal_overlay .drop_wrap .drop .subtitle {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 18px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 7px;
+}
+
+.modal_overlay .drop_wrap .drop .link {
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+.modal_overlay .drop_wrap .drop .link + .link {
+  margin-top: 7px;
+}
+
+.modal_overlay .drop_wrap .drop .link + .subtitle {
+  margin-top: 20px;
+}
+
+.modal_overlay .drop_wrap .drop .clear {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.modal_overlay .small {
+  width: 498px;
+}
+
+.modal_overlay #cv_thanks {
+  width: 899px;
+}
+
+.modal_overlay #cv_thanks .text {
+  max-width: 457px;
+}
+
+.modal_overlay #cv_thanks .btn_color {
+  margin-top: 200px;
+}
+
+.modal_overlay .or_wrap {
+  margin: 24px auto 0;
+  display: block;
+  width: 246px;
+}
+
+.modal_overlay .or_wrap .or {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.modal_overlay .or_wrap .or:before, .modal_overlay .or_wrap .or:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: #f83e46;
+}
+
+.modal_overlay .or_wrap .or:before {
+  margin-right: 10px;
+}
+
+.modal_overlay .or_wrap .or:after {
+  margin-left: 10px;
+}
+
+.modal_overlay .tels {
+  margin-top: 20px;
+  padding-left: 53px;
+}
+
+.modal_overlay .tels:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 7px;
+  width: 18px;
+  height: 17px;
+  background: url("../img/icons/phone_red.svg") no-repeat center/contain;
+}
+
+.modal_overlay .tels a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.32px;
+  line-height: 17px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.modal_overlay .tels a + a {
+  margin-top: 7px;
+}
+
+.modal_overlay .btn_color {
+  line-height: 43px;
+}
+
+.modal_overlay #thanks {
+  padding-bottom: 135px;
+}
+
+.modal_overlay #thanks2 {
+  padding-bottom: 330px;
 }
 /*# sourceMappingURL=styles.css.map */

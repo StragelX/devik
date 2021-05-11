@@ -1,4 +1,50 @@
 $( document ).ready(function() {
+    var apprecode_cookies = localStorage.getItem('apprecode_cookies');
+    if (apprecode_cookies != 'checked') {
+      $(".cookies").removeClass('hidden');
+    }
+
+    $(".phone").mask("+38(099) 999 99 99");
+
+    $('.drop_wrap .selected').click(function(){
+        $(this).toggleClass('active');
+        $(this).siblings('.drop').toggleClass('active');
+    })
+
+    $('.drop_wrap .drop .link').click(function(){
+        $(this).closest('.drop').toggleClass('active');
+        $(this).closest('.drop_wrap').find('.selected').toggleClass('active');
+        $(this).closest('.drop_wrap').find('.selected').html($(this).html());
+    })
+
+    $('.drop_wrap .drop .clear').click(function(){
+        $(this).closest('.drop').toggleClass('active');
+        $(this).closest('.drop_wrap').find('.selected').toggleClass('active');
+        $(this).closest('.drop_wrap').find('.selected').html('Оберіть послугу');
+    })
+
+    $(".input_wrap input, .input_wrap textarea").click(function(){
+        $(this).removeClass('invalid');
+    })
+
+    $(".input_wrap input:required").blur(function(){
+        $(this).removeClass('invalid');
+        if( $(this).val() == '' || $(this).is(":invalid")) {
+          $(this).addClass('invalid');
+        } else if ( $(this).val() != '' ) {
+            $(this).addClass('filled');
+        }
+    });
+
+    $(".input_wrap textarea").blur(function(){
+        $(this).removeClass('invalid');
+        if ( $(this).val() != '' ) {
+            $(this).addClass('filled');
+        } else {
+            $(this).removeClass('filled');
+        }
+      });
+      
     $('.open_close_menu').click(function(){
         $('menu').toggleClass('active');
         $('body').toggleClass('no_scroll');
@@ -19,7 +65,7 @@ $( document ).ready(function() {
         $(this).closest('.cookies_wrap').removeClass('active');
     })
 
-    $('.lang ').click(function(){
+    $('.lang').click(function(){
         $(this).toggleClass('active');
     })
 
@@ -91,10 +137,7 @@ $( document ).ready(function() {
         });
     }
 
-    // services_swiper
-
     if ( $('#custom_scroll_bar') ) {
         new SimpleBar(document.getElementById('custom_scroll_bar'));
     }
-    
 });
