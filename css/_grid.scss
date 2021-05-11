@@ -6,7 +6,6 @@ $xl: #{"(min-width: 1025px)"};
 $grid-count: 12;
 $grid-padding: 20px;
 $name: col;
-$grid-prefix: xs s sm m;
 
 @mixin col {
   -ms-flex-preferred-size: 0;

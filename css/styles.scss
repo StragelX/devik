@@ -88,6 +88,7 @@ $grey: #bababa;
 }
 
 .btn_transparent {
+  width: 286px;
   color: #fff;
   font-family: "Proxima Nova";
   font-size: 12px;
@@ -105,6 +106,7 @@ $grey: #bababa;
 }
 
 .btn_color {
+  width: 286px;
   color: #ffffff;
   font-family: "Proxima Nova";
   font-size: 12px;
@@ -1248,7 +1250,6 @@ footer {
   }
 
   .btn_color {
-    width: 286px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
@@ -1317,7 +1318,6 @@ footer {
 
   .btn_transparent {
     display: block;
-    width: 286px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
@@ -1521,7 +1521,6 @@ footer {
 
   .btn_color {
     letter-spacing: 1.8px;
-    width: 286px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 38px;
@@ -1562,10 +1561,6 @@ footer {
       text-decoration: none;
     }
   }
-
-  .btn_color {
-    width: 286px;
-  }
 }
 
 #privet_cabinet {
@@ -1586,7 +1581,6 @@ footer {
   }
 
   .btn_color {
-    width: 286px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1684,7 +1678,6 @@ footer {
 
   .btn_transparent {
     display: block;
-    width: 286px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
@@ -1708,7 +1701,6 @@ footer {
 
   .btn_transparent {
     display: block;
-    width: 286px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 75px;
@@ -1786,7 +1778,6 @@ footer {
     margin-bottom: 250px;
 
     .btn_color {
-      width: 286px;
       margin-top: 15px;
     }
   }
@@ -2348,10 +2339,6 @@ footer {
     }
   }
 
-  .btn_color {
-    width: 286px;
-  }
-
   &.for_cariers {
     padding-top: 60px;
 
@@ -2426,10 +2413,6 @@ footer {
     margin-bottom: 50px;
   }
 
-  .btn_color {
-    width: 286px;
-  }
-
   .cargo_ownres_img_2 {
     margin-top: -150px;
   }
@@ -2453,15 +2436,13 @@ footer {
     padding-left: 44px;
     margin-bottom: 50px;
   }
-
-  .btn_color {
-    width: 286px;
-  }
 }
 
 #orderring_procces {
+  padding-bottom: 200px;
+
   h2 {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 
   .one_process {
@@ -2471,26 +2452,70 @@ footer {
     padding-bottom: 70px;
 
     &.left {
+      padding-right: 150px;
+      border-right: 70px $red solid;
+      margin-right: -29px;
+
       &:after {
         content: "";
         position: absolute;
-        background-color: $red;
-        top: 0;
-        bottom: 0;
-        right: -168px;
-        width: 68px;
+        background: $red url("../img/icons/process_arrow_rigth.svg") no-repeat
+          center;
+        top: 50px;
+        bottom: 50px;
+        right: -200px;
+        width: 200px;
       }
     }
 
     &.right {
+      padding-left: 150px;
+      border-left: 70px $red solid;
+      margin-left: -29px;
+
+      @media all and (max-width: 1367px) {
+        margin-left: -38px;
+      }
+
       &:after {
         content: "";
         position: absolute;
-        background-color: $red;
+        background: $red url("../img/icons/process_arrow_left.svg") no-repeat
+          center;
+        top: 50px;
+        bottom: 50px;
+        left: -200px;
+        width: 200px;
+      }
+    }
+
+    &.last {
+      &:after {
+        content: "";
+        position: absolute;
+        background: $red;
         top: 0;
         bottom: 0;
-        left: -168px;
-        width: 68px;
+        left: -200px;
+        width: 200px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: $red;
+        bottom: -200px;
+        left: -200px;
+        height: 200px;
+        width: 330px;
+      }
+    }
+
+    &.first {
+      padding-top: 0;
+
+      &:after {
+        top: 0;
       }
     }
 
@@ -2507,10 +2532,6 @@ footer {
     .text {
       color: $dark;
       margin-bottom: 50px;
-    }
-
-    .btn_color {
-      width: 286px;
     }
 
     .call_modal {
@@ -2566,10 +2587,6 @@ footer {
       color: #fff;
       margin-bottom: 50px;
     }
-
-    .btn_color {
-      width: 286px;
-    }
   }
 }
 
@@ -2607,10 +2624,6 @@ footer {
     font-weight: 700;
     line-height: 24px;
     margin-bottom: 50px;
-  }
-
-  .btn_color {
-    width: 286px;
   }
 }
 
@@ -2721,7 +2734,6 @@ footer {
   .btn_color {
     line-height: 45px;
     display: block;
-    width: 286px;
   }
 }
 

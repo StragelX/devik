@@ -939,6 +939,7 @@ a h6 {
 }
 
 .btn_transparent {
+  width: 286px;
   color: #fff;
   font-family: "Proxima Nova";
   font-size: 12px;
@@ -956,6 +957,7 @@ a h6 {
 }
 
 .btn_color {
+  width: 286px;
   color: #ffffff;
   font-family: "Proxima Nova";
   font-size: 12px;
@@ -2092,7 +2094,6 @@ footer .bottom_prat .copyright {
 }
 
 .modal_overlay .btn_color {
-  width: 286px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -2159,7 +2160,6 @@ footer .bottom_prat .copyright {
 
 .inner_with_articles .btn_transparent {
   display: block;
-  width: 286px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 25px;
@@ -2359,7 +2359,6 @@ footer .bottom_prat .copyright {
 
 #our_services .btn_color {
   letter-spacing: 1.8px;
-  width: 286px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 38px;
@@ -2399,10 +2398,6 @@ footer .bottom_prat .copyright {
   text-decoration: none;
 }
 
-#for_owners .btn_color {
-  width: 286px;
-}
-
 #privet_cabinet {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -2422,7 +2417,6 @@ footer .bottom_prat .copyright {
 }
 
 #privet_cabinet .btn_color {
-  width: 286px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -2520,7 +2514,6 @@ footer .bottom_prat .copyright {
 
 #actions .btn_transparent {
   display: block;
-  width: 286px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 25px;
@@ -2544,7 +2537,6 @@ footer .bottom_prat .copyright {
 
 #blog .btn_transparent {
   display: block;
-  width: 286px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 75px;
@@ -2620,7 +2612,6 @@ footer .bottom_prat .copyright {
 }
 
 #contacts .skarga_wrap .btn_color {
-  width: 286px;
   margin-top: 15px;
 }
 
@@ -3171,10 +3162,6 @@ footer .bottom_prat .copyright {
   font-weight: 700;
 }
 
-#sertificates .btn_color {
-  width: 286px;
-}
-
 #sertificates.for_cariers {
   padding-top: 60px;
 }
@@ -3249,10 +3236,6 @@ footer .bottom_prat .copyright {
   margin-bottom: 50px;
 }
 
-#get_transportation .btn_color {
-  width: 286px;
-}
-
 #get_transportation .cargo_ownres_img_2 {
   margin-top: -150px;
 }
@@ -3277,12 +3260,12 @@ footer .bottom_prat .copyright {
   margin-bottom: 50px;
 }
 
-#calculate_benefits .btn_color {
-  width: 286px;
+#orderring_procces {
+  padding-bottom: 200px;
 }
 
 #orderring_procces h2 {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 #orderring_procces .one_process {
@@ -3292,24 +3275,70 @@ footer .bottom_prat .copyright {
   padding-bottom: 70px;
 }
 
+#orderring_procces .one_process.left {
+  padding-right: 150px;
+  border-right: 70px #f83e46 solid;
+  margin-right: -29px;
+}
+
 #orderring_procces .one_process.left:after {
   content: "";
   position: absolute;
-  background-color: #f83e46;
-  top: 0;
-  bottom: 0;
-  right: -168px;
-  width: 68px;
+  background: #f83e46 url("../img/icons/process_arrow_rigth.svg") no-repeat center;
+  top: 50px;
+  bottom: 50px;
+  right: -200px;
+  width: 200px;
+}
+
+#orderring_procces .one_process.right {
+  padding-left: 150px;
+  border-left: 70px #f83e46 solid;
+  margin-left: -29px;
+}
+
+@media all and (max-width: 1367px) {
+  #orderring_procces .one_process.right {
+    margin-left: -38px;
+  }
 }
 
 #orderring_procces .one_process.right:after {
   content: "";
   position: absolute;
-  background-color: #f83e46;
+  background: #f83e46 url("../img/icons/process_arrow_left.svg") no-repeat center;
+  top: 50px;
+  bottom: 50px;
+  left: -200px;
+  width: 200px;
+}
+
+#orderring_procces .one_process.last:after {
+  content: "";
+  position: absolute;
+  background: #f83e46;
   top: 0;
   bottom: 0;
-  left: -168px;
-  width: 68px;
+  left: -200px;
+  width: 200px;
+}
+
+#orderring_procces .one_process.last:before {
+  content: "";
+  position: absolute;
+  background: #f83e46;
+  bottom: -200px;
+  left: -200px;
+  height: 200px;
+  width: 330px;
+}
+
+#orderring_procces .one_process.first {
+  padding-top: 0;
+}
+
+#orderring_procces .one_process.first:after {
+  top: 0;
 }
 
 #orderring_procces .one_process img {
@@ -3325,10 +3354,6 @@ footer .bottom_prat .copyright {
 #orderring_procces .one_process .text {
   color: #303d43;
   margin-bottom: 50px;
-}
-
-#orderring_procces .one_process .btn_color {
-  width: 286px;
 }
 
 #orderring_procces .one_process .call_modal {
@@ -3383,10 +3408,6 @@ footer .bottom_prat .copyright {
   margin-bottom: 50px;
 }
 
-#giv_transportation .text_on_blue .btn_color {
-  width: 286px;
-}
-
 #services_inner_top {
   height: 470px;
   background-position: center;
@@ -3422,10 +3443,6 @@ footer .bottom_prat .copyright {
   font-weight: 700;
   line-height: 24px;
   margin-bottom: 50px;
-}
-
-#services_inner_top .btn_color {
-  width: 286px;
 }
 
 #service_description {
@@ -3540,7 +3557,6 @@ footer .bottom_prat .copyright {
 #error .btn_color {
   line-height: 45px;
   display: block;
-  width: 286px;
 }
 
 #sitemap {
