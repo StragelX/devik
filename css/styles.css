@@ -1586,6 +1586,12 @@ menu .secondary_block .title {
   text-transform: uppercase;
 }
 
+@media all and (max-height: 650px) {
+  menu .secondary_block .title {
+    margin-bottom: 15px;
+  }
+}
+
 menu .groups_wrap {
   display: flex;
 }
@@ -1665,6 +1671,12 @@ menu .bottom_cards {
   position: relative;
   bottom: auto;
   right: auto;
+}
+
+@media all and (max-height: 650px) {
+  menu .bottom_cards {
+    margin-top: 20px;
+  }
 }
 
 footer .top_part {
@@ -1890,6 +1902,12 @@ footer .bottom_prat .copyright {
   height: 100vh;
   max-height: 1080px;
   padding-top: 223px;
+}
+
+@media all and (max-height: 630px) {
+  .main_top .container {
+    padding-top: 130px;
+  }
 }
 
 .main_top .inserted_block {
@@ -3096,7 +3114,7 @@ footer .bottom_prat .copyright {
   height: 500px;
   padding-top: 100px;
   padding-bottom: 100px;
-  background: #f83e46 url("../img/about_sertificates_bg.jpg") no-repeat left center/50%;
+  background: #f83e46 url("../img/about_sertificates_bg.jpg") no-repeat left center/50% 100%;
 }
 
 #sertificates .sertificates_wrap {
@@ -3329,7 +3347,7 @@ footer .bottom_prat .copyright {
 }
 
 #giv_transportation {
-  margin-top: 250px;
+  padding-top: 250px;
   margin-bottom: 150px;
 }
 
@@ -3411,7 +3429,7 @@ footer .bottom_prat .copyright {
 }
 
 #service_description {
-  margin-top: 250px;
+  padding-top: 250px;
   margin-bottom: 150px;
 }
 
@@ -3421,6 +3439,12 @@ footer .bottom_prat .copyright {
   padding-bottom: 40px;
   margin-left: -44px;
   margin-right: -44px;
+}
+
+@media all and (max-width: 1400px) {
+  #service_description .red_bg {
+    padding-left: 44px;
+  }
 }
 
 #service_description h3 {
@@ -3470,6 +3494,12 @@ footer .bottom_prat .copyright {
   padding-top: 100px;
 }
 
+@media all and (max-height: 650px) {
+  #error {
+    padding-top: 30px;
+  }
+}
+
 #error .title {
   color: #ffffff;
   font-size: 167px;
@@ -3499,6 +3529,12 @@ footer .bottom_prat .copyright {
   font-weight: 700;
   line-height: 24px;
   margin-bottom: 30px;
+}
+
+@media all and (max-height: 650px) {
+  #error p {
+    margin-bottom: 75px;
+  }
 }
 
 #error .btn_color {

@@ -742,6 +742,10 @@ menu {
       letter-spacing: 1.25px;
       line-height: 27px;
       text-transform: uppercase;
+
+      @media all and (max-height: 650px) {
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -826,6 +830,10 @@ menu {
     position: relative;
     bottom: auto;
     right: auto;
+
+    @media all and (max-height: 650px) {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -1053,6 +1061,10 @@ footer {
     height: 100vh;
     max-height: 1080px;
     padding-top: 223px;
+
+    @media all and (max-height: 630px) {
+      padding-top: 130px;
+    }
   }
 
   .inserted_block {
@@ -2280,7 +2292,7 @@ footer {
   padding-top: 100px;
   padding-bottom: 100px;
   background: $red url("../img/about_sertificates_bg.jpg") no-repeat left center /
-    50%;
+    50% 100%;
 
   .sertificates_wrap {
     counter-reset: sertificates;
@@ -2519,7 +2531,7 @@ footer {
 }
 
 #giv_transportation {
-  margin-top: 250px;
+  padding-top: 250px;
   margin-bottom: 150px;
 
   .img_wrap {
@@ -2603,7 +2615,7 @@ footer {
 }
 
 #service_description {
-  margin-top: 250px;
+  padding-top: 250px;
   margin-bottom: 150px;
 
   .red_bg {
@@ -2612,6 +2624,10 @@ footer {
     padding-bottom: 40px;
     margin-left: -44px;
     margin-right: -44px;
+
+    @media all and (max-width: 1400px) {
+      padding-left: 44px;
+    }
   }
 
   h3 {
@@ -2663,6 +2679,10 @@ footer {
   background: url("../img/road.jpg") no-repeat center / 113%;
   padding-top: 100px;
 
+  @media all and (max-height: 650px) {
+    padding-top: 30px;
+  }
+
   .title {
     color: #ffffff;
     font-size: 167px;
@@ -2692,6 +2712,10 @@ footer {
     font-weight: 700;
     line-height: 24px;
     margin-bottom: 30px;
+
+    @media all and (max-height: 650px) {
+      margin-bottom: 75px;
+    }
   }
 
   .btn_color {
