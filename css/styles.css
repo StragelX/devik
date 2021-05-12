@@ -883,8 +883,8 @@ a h6 {
   align-items: center;
 }
 
-.nav_warp .clients_swiper_prev,
-.nav_warp .clients_swiper_next {
+.nav_warp .prev,
+.nav_warp .next {
   border-radius: 50%;
   flex: none;
   width: 40px;
@@ -897,34 +897,34 @@ a h6 {
   cursor: pointer;
 }
 
-.nav_warp .clients_swiper_prev svg,
-.nav_warp .clients_swiper_next svg {
+.nav_warp .prev svg,
+.nav_warp .next svg {
   width: 12px;
 }
 
-.nav_warp .clients_swiper_prev svg path,
-.nav_warp .clients_swiper_next svg path {
+.nav_warp .prev svg path,
+.nav_warp .next svg path {
   fill: #000;
   transition: fill 360ms;
 }
 
-.nav_warp .clients_swiper_prev:hover,
-.nav_warp .clients_swiper_next:hover {
+.nav_warp .prev:hover,
+.nav_warp .next:hover {
   transition: background-color 360ms;
   background-color: #f83e46;
 }
 
-.nav_warp .clients_swiper_prev:hover svg path,
-.nav_warp .clients_swiper_next:hover svg path {
+.nav_warp .prev:hover svg path,
+.nav_warp .next:hover svg path {
   fill: #fff;
   transition: fill 360ms;
 }
 
-.nav_warp .clients_swiper_prev svg {
+.nav_warp .prev svg {
   transform: rotate(180deg);
 }
 
-.nav_warp .clients_swiper_next {
+.nav_warp .next {
   margin-left: 10px;
 }
 
@@ -3641,6 +3641,15 @@ footer .bottom_prat .copyright {
   transition: opacity 360ms;
 }
 
+.modal_overlay .back_btn {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 15px;
+  left: 10px;
+  background: url("../img/icons/modal_back_arrow.svg") no-repeat center/contain;
+}
+
 .modal_overlay .close {
   position: absolute;
   right: 0;
@@ -3859,6 +3868,14 @@ footer .bottom_prat .copyright {
   width: 899px;
 }
 
+.modal_overlay #cv_inner .btn_color {
+  margin-top: 50px;
+}
+
+.modal_overlay #cv_inner textarea {
+  height: 185px;
+}
+
 .modal_overlay .or_wrap {
   margin: 24px auto 0;
   display: block;
@@ -3931,5 +3948,61 @@ footer .bottom_prat .copyright {
 
 .modal_overlay #thanks2 {
   padding-bottom: 330px;
+}
+
+.modal_overlay .vacancy {
+  width: 900px;
+  padding: 0;
+  background: #f83e46 url("../img/modal_bg.jpg") no-repeat left center/50% 100%;
+}
+
+.modal_overlay .vacancy .close {
+  background-color: #00334c;
+  z-index: 10;
+}
+
+.modal_overlay .vacancy .btn_color {
+  margin-top: 30px;
+  margin-left: 25px;
+}
+
+.modal_overlay .vacancy .nav_warp {
+  position: absolute;
+  left: 70px;
+  bottom: 50px;
+}
+
+.modal_overlay .vacancy ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.modal_overlay .vacancy ul + h3 {
+  margin-top: 30px;
+}
+
+.modal_overlay .vacancy ul li {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  text-align: left;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+.modal_overlay .vacancy ul li + li {
+  margin-top: 10px;
+}
+
+.modal_overlay .vacancy .left {
+  padding: 50px 50px 150px;
+}
+
+.modal_overlay .vacancy .right {
+  padding: 50px;
+  max-height: 550px;
+  margin-right: -15px;
 }
 /*# sourceMappingURL=styles.css.map */

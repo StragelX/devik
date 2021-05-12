@@ -7,6 +7,7 @@
     <title></title>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -499,11 +500,11 @@
                         <p class="text">Клієнти, що обрали нас:</p>
     
                         <div class="nav_warp">
-                            <div class="clients_swiper_prev">
+                            <div class="clients_swiper_prev prev">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10"><g><g><path fill="#fff" d="M11.25 4.386L7.207.343a.608.608 0 0 0-.433-.179.608.608 0 0 0-.434.179L5.973.71a.62.62 0 0 0 0 .872l2.359 2.363H.838a.598.598 0 0 0-.605.603v.519c0 .338.267.63.605.63h7.52L5.974 8.072a.604.604 0 0 0 0 .86l.367.367c.116.115.27.178.434.178a.608.608 0 0 0 .433-.18l4.043-4.042a.609.609 0 0 0 .179-.435.609.609 0 0 0-.18-.435z"/></g></g></svg>
                             </div>
 
-                            <div class="clients_swiper_next">
+                            <div class="clients_swiper_next next">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10"><g><g><path fill="#fff" d="M11.25 4.386L7.207.343a.608.608 0 0 0-.433-.179.608.608 0 0 0-.434.179L5.973.71a.62.62 0 0 0 0 .872l2.359 2.363H.838a.598.598 0 0 0-.605.603v.519c0 .338.267.63.605.63h7.52L5.974 8.072a.604.604 0 0 0 0 .86l.367.367c.116.115.27.178.434.178a.608.608 0 0 0 .433-.18l4.043-4.042a.609.609 0 0 0 .179-.435.609.609 0 0 0-.18-.435z"/></g></g></svg>
                             </div>
                         </div>
@@ -1194,14 +1195,128 @@
             <a href="/" class="btn_color">На головну</a>
         </div>
 
-        <div class="modal active" id="cv_inner">
+        <div class="modal" id="cv_inner">
+            <button class="back_btn hover_tr"></button>
             <button class="close hover_tr"></button>
 
             <h2 class="left_rad_line">
                 Менеджер-логіст
             </h2>
 
+            <div class="row">
+                <div class="col_xl_6">
+                    <div class="input_wrap">
+                        <input type="text" name="name" required>
+                        <label for="name" class="label">Ім’я *</label>
+                    </div>
+        
+                    <div class="input_wrap">
+                        <input type="text" name="tel" class="phone" required>
+                        <label for="tel" class="label">Номер телефону *</label>
+                    </div>
+        
+                    <div class="input_wrap">
+                        <input type="text" name="cv">
+                        <label for="cv" class="label">Посилання на резюме</label>
+                    </div>
+                </div>
+
+                <div class="col_xl_6">
+                    <div class="input_wrap">
+                        <textarea name="msg"></textarea>
+                        <label for="msg" class="label">Написати коментар</label>
+                    </div>
+                </div>
+            </div>
+
             <input type="submit" class="btn_color" value="Відправити резюме">
+        </div>
+
+        <div class="modal vacancy active">
+            <button class="close hover_tr"></button>
+
+            <div class="row">
+                <div class="col_xl_5">
+                    <div class="left">
+                        <h2 class="left_rad_line">
+                            Менеджер-логіст
+                        </h2>
+
+                        <p class="text">
+                            Компанія Devik пропонує вакансію менеджера з логістики.
+                        </p>
+
+                        <button class="btn_color">Подати резюме</button>
+
+                        <div class="nav_warp">
+                            <div class="prev" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-e9a72f53759f4f76">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10"><g><g><path fill="#fff" d="M11.25 4.386L7.207.343a.608.608 0 0 0-.433-.179.608.608 0 0 0-.434.179L5.973.71a.62.62 0 0 0 0 .872l2.359 2.363H.838a.598.598 0 0 0-.605.603v.519c0 .338.267.63.605.63h7.52L5.974 8.072a.604.604 0 0 0 0 .86l.367.367c.116.115.27.178.434.178a.608.608 0 0 0 .433-.18l4.043-4.042a.609.609 0 0 0 .179-.435.609.609 0 0 0-.18-.435z"></path></g></g></svg>
+                            </div>
+
+                            <div class="next" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-e9a72f53759f4f76">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10"><g><g><path fill="#fff" d="M11.25 4.386L7.207.343a.608.608 0 0 0-.433-.179.608.608 0 0 0-.434.179L5.973.71a.62.62 0 0 0 0 .872l2.359 2.363H.838a.598.598 0 0 0-.605.603v.519c0 .338.267.63.605.63h7.52L5.974 8.072a.604.604 0 0 0 0 .86l.367.367c.116.115.27.178.434.178a.608.608 0 0 0 .433-.18l4.043-4.042a.609.609 0 0 0 .179-.435.609.609 0 0 0-.18-.435z"></path></g></g></svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col_xl_6 xl_offset_1">
+                    <div class="right custom_scroll_bar" data-simplebar>
+                        <h3>Якщо ви маєте:</h3>
+
+                        <ul>
+                            <li>— Досвід роботи у логістичній, транспортній, експедиційній компанії (бажаний)</li>
+                            <li>— Знання Lardi-Trans, Della, бажано;</li>
+                            <li>— Навички роботи в 1С, Bitrix 24;</li>
+                            <li>— Здатність швидко навчатися.</li>
+                        </ul>
+
+                        <h3>Ваша роль буде:</h3>
+
+                        <ul>
+                            <li>
+                                — Пошук транспорту відповідно до запитів від клієнтів;
+                            </li>
+
+                            <li>
+                                — Організація вантажних перевезень;
+                            </li>
+
+                            <li>
+                                — Планування, організація, супровід і контроль перевезень автомобільним транспортом;
+                            </li>
+
+                            <li>
+                                — Контроль комплектності та оформлення заявок, товарно-супровідної документації;
+                            </li>
+
+                            <li>
+                                — Розширення бази перевізників;
+                            </li>
+
+                            <li>
+                                — Ведення звітності та документообігу;
+                            </li>
+
+                            <li>
+                                — Контроль комплектності та оформлення заявок, товарно-супровідної документації;
+                            </li>
+
+                            <li>
+                                — Розширення бази перевізників;
+                            </li>
+
+                            <li>
+                                — Ведення звітності та документообігу;
+                            </li>
+
+                            <li>
+                                — Ведення бази в CRM-системі.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
@@ -1407,6 +1522,7 @@
     }
 </script>
 
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/counter.js"></script>
 <script src="js/scripts.js"></script>

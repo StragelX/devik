@@ -137,7 +137,7 @@ $( document ).ready(function() {
         });
     }
 
-    if ( $('#custom_scroll_bar') ) {
-        new SimpleBar(document.getElementById('custom_scroll_bar'));
+    if ( $('.custom_scroll_bar') ) {
+        new SimpleBar(document.getElementsByClassName('custom_scroll_bar'));
     }
 });
