@@ -2691,6 +2691,23 @@ footer .bottom_prat .copyright {
   height: 500px;
   margin-top: 50px;
   margin-bottom: 15px;
+  display: block;
+}
+
+.article .big_img.video:after {
+  content: "";
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #00334c;
+  opacity: 0.6;
+}
+
+.article .big_img.video .watch_video {
+  z-index: 1;
 }
 
 .article .img_titile {
@@ -3836,6 +3853,10 @@ footer .bottom_prat .copyright {
 
 .modal_overlay #cv_thanks .btn_color {
   margin-top: 200px;
+}
+
+.modal_overlay #cv_inner {
+  width: 899px;
 }
 
 .modal_overlay .or_wrap {
