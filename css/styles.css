@@ -1690,12 +1690,21 @@ footer .top_part .left_part {
   z-index: 2;
   width: 636px;
   height: 263px;
-  box-shadow: 0 -3px 13px rgba(0, 0, 0, 0.07);
-  background-color: #ffffff;
   padding: 50px 80px 60px 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+footer .top_part .left_part:before {
+  content: "";
+  box-shadow: 0 -3px 13px rgba(0, 0, 0, 0.07);
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -1000px;
 }
 
 footer .top_part .left_part p {
@@ -1729,10 +1738,19 @@ footer .top_part .right_part {
   z-index: 1;
   height: 414px;
   margin-left: -78px;
-  box-shadow: 0 -3px 21px rgba(0, 0, 0, 0.1);
-  background-color: #00334c;
   padding: 100px 120px;
   text-align: center;
+}
+
+footer .top_part .right_part:before {
+  box-shadow: 0 -3px 21px rgba(0, 0, 0, 0.1);
+  background-color: #00334c;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1000px;
+  left: 0;
 }
 
 footer .top_part .right_part h2 {
