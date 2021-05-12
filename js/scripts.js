@@ -76,9 +76,13 @@ $( document ).ready(function() {
     }
 
     $('.modal_overlay .close, .modal_overlay .btn_color').click(function(){
-        $(this).closest('.modal_overlay').removeClass('active');
+        // $(this).closest('.modal_overlay').removeClass('active');
         $(this).closest('.modal').removeClass('active');
         $('body').removeClass('no_scroll');
+
+        if ( $(this).hasClass('last') ) {
+            $(this).closest('.modal_overlay').removeClass('active');
+        }
     })
 
     $('#blog .btn_transparent.tag').click(function(){
