@@ -114,17 +114,43 @@ $( document ).ready(function() {
     
     if ($('.clients_logos_swiper')) {
         const clients_logos_swiper = new Swiper('.clients_logos_swiper', {
-            slidesPerView: 6,
             loop: true,
-            autoplay: true
+            autoplay: true,
+
+            breakpoints: {
+                750: {
+                    slidesPerView: 3
+                },
+    
+                900: {
+                    slidesPerView: 4
+                },
+    
+                1025: {
+                    slidesPerView: 6
+                }
+            }
         });
     }
 
     if ($('.sertificates_swiper')) {
         const sertificates_swiper = new Swiper('.sertificates_swiper', {
-            slidesPerView: 4,
             loop: true,
-            autoplay: true
+            autoplay: true,
+
+            breakpoints: {
+                750: {
+                    slidesPerView: 4.8
+                },
+    
+                900: {
+                    slidesPerView: 5.9
+                },
+    
+                1025: {
+                    slidesPerView: 4
+                }
+            }
         });
     }
 
@@ -133,6 +159,20 @@ $( document ).ready(function() {
             slidesPerView: 3,
             loop: true,
             spaceBetween: 20,
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+    
+                750: {
+                    slidesPerView: 2
+                },
+    
+                1025: {
+                    slidesPerView: 3
+                }
+            },
     
             navigation: {
               nextEl: '.clients_swiper_prev',
