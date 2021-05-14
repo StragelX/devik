@@ -50,6 +50,22 @@ $( document ).ready(function() {
         $('body').toggleClass('no_scroll');
     });
 
+    $('.modile_menu_bar button.burger').click(function(){
+        $(this).toggleClass('active');
+        $('menu').toggleClass('active');
+        $('body').toggleClass('no_scroll');
+    });
+
+    $('.call_modal').click(function(){
+        var id = $(this).attr('data-id');
+        $('.modal_overlay').addClass('active');
+        $('.modal').each(function(){
+            if ( $(this).attr('id') == id ) {
+                $(this).addClass('active');
+            }
+        })
+    });
+
     $('menu .line.with_group').click(function(){
         var id = $(this).attr('data-id');
 
@@ -76,13 +92,9 @@ $( document ).ready(function() {
     }
 
     $('.modal_overlay .close, .modal_overlay .btn_color').click(function(){
-        // $(this).closest('.modal_overlay').removeClass('active');
+        $(this).closest('.modal_overlay').removeClass('active');
         $(this).closest('.modal').removeClass('active');
         $('body').removeClass('no_scroll');
-
-        if ( $(this).hasClass('last') ) {
-            $(this).closest('.modal_overlay').removeClass('active');
-        }
     })
 
     $('#blog .btn_transparent.tag').click(function(){
@@ -118,6 +130,10 @@ $( document ).ready(function() {
             autoplay: true,
 
             breakpoints: {
+                70: {
+                    slidesPerView: 2
+                },
+
                 750: {
                     slidesPerView: 3
                 },
@@ -139,6 +155,10 @@ $( document ).ready(function() {
             autoplay: true,
 
             breakpoints: {
+                0: {
+                    slidesPerView: 4
+                },
+
                 750: {
                     slidesPerView: 4.8
                 },
@@ -156,13 +176,13 @@ $( document ).ready(function() {
 
     if ($('.services_swiper')) {
         const services_swiper = new Swiper('.services_swiper', {
-            slidesPerView: 3,
             loop: true,
             spaceBetween: 20,
 
             breakpoints: {
                 0: {
-                    slidesPerView: 1
+                    slidesPerView: 1, 
+                    spaceBetween: 0
                 },
     
                 750: {
@@ -177,6 +197,26 @@ $( document ).ready(function() {
             navigation: {
               nextEl: '.clients_swiper_prev',
               prevEl: '.clients_swiper_next',
+            },
+        });
+    }
+
+    if ($('.main_buttons_swiper') && $( document ).width() < 770) {
+        const main_buttons_swiper = new Swiper('.main_buttons_swiper', {
+            slidesPerView: 3.5,
+            spaceBetween: 20
+        });
+    }
+
+    if ($('.workers_swiper') && $( document ).width() < 770) {
+        const workers_swiper = new Swiper('.workers_swiper', {
+            spaceBetween: 20,
+            slidesPerView: 1.5,
+            loop: true,
+
+            navigation: {
+                nextEl: '.clients_swiper_prev',
+                prevEl: '.clients_swiper_next',
             },
         });
     }

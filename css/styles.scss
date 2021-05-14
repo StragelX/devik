@@ -163,6 +163,10 @@ body {
   padding-left: 70px;
   overflow-x: hidden;
 
+  @media all and (max-width: 767px) {
+    padding-left: 0;
+  }
+
   &.no_scroll {
     overflow: hidden;
   }
@@ -220,6 +224,11 @@ h2 {
   font-style: normal;
   letter-spacing: normal;
   line-height: normal;
+
+  @media all and (max-width: 767px) {
+    font-size: 35px;
+    line-height: 35px;
+  }
 }
 
 h3 {
@@ -333,6 +342,11 @@ p.text {
     height: 400px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 29% 85%, 29% 100%, 0 100%);
+
+    @media all and (max-width: 767px) {
+      height: 235px;
+      clip-path: none;
+    }
   }
 
   .info {
@@ -342,6 +356,14 @@ p.text {
     margin-top: -60px;
     float: right;
     margin-bottom: 50px;
+
+    @media all and (max-width: 767px) {
+      margin-top: 0;
+      float: none;
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+    }
   }
 
   &.small {
@@ -351,6 +373,10 @@ p.text {
 
     .info {
       margin-top: -40px;
+
+      @media all and (max-width: 767px) {
+        margin-top: 0;
+      }
     }
 
     h3 {
@@ -369,6 +395,10 @@ p.text {
   @media all and (max-width: 769px) {
     height: auto;
     padding-bottom: 20px;
+  }
+
+  @media all and (max-width: 767px) {
+    padding-bottom: 85px;
   }
 
   .date,
@@ -470,6 +500,10 @@ p.text {
   justify-content: space-between;
   align-items: center;
 
+  @media all and (max-width: 767px) {
+    max-width: 250px;
+  }
+
   a {
     flex: none;
     line-height: 0;
@@ -518,6 +552,19 @@ p.text {
 
   .btn_transparent {
     width: 150px;
+
+    @media all and (max-width: 767px) {
+      margin-top: 20px;
+      height: 35px;
+      line-height: 33px;
+    }
+  }
+
+  .df {
+    @media all and (max-width: 767px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 }
 
@@ -544,10 +591,115 @@ main {
     @media all and (max-width: 1300px) {
       width: 100%;
     }
+
+    @media all and (max-width: 767px) {
+      background: url("../img/bg.png") no-repeat bottom right / 250px;
+    }
   }
 
   & > * {
     z-index: 1;
+  }
+}
+
+.modile_menu_bar {
+  height: 75px;
+  padding: 25px 17px 10px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &.dark {
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+    background-color: $blue;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .lang {
+    cursor: pointer;
+
+    span {
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      line-height: 18px;
+      text-transform: uppercase;
+      margin-right: 2px;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    .drop {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      opacity: 0;
+      transition: opacity 180ms;
+      pointer-events: none;
+    }
+
+    &:after {
+      cursor: pointer;
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      transform: rotate(0);
+      transition: transform 180ms;
+      width: 8px;
+      height: 8px;
+      background: url("../img/icons/lang_arrow.svg") no-repeat center / contain;
+    }
+
+    &.active {
+      &:after {
+        transform: rotate(180deg);
+        transition: transform 180ms;
+      }
+
+      .drop {
+        opacity: 1;
+        transition: opacity 180ms;
+        pointer-events: all;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+
+    button {
+      margin-left: 20px;
+    }
+
+    .burger {
+      img {
+        width: 25px;
+      }
+
+      .close_burger {
+        display: none;
+      }
+
+      &.active {
+        .burger {
+          display: none;
+        }
+
+        .close_burger {
+          display: block;
+        }
+      }
+    }
   }
 }
 
@@ -559,6 +711,11 @@ menu {
   position: fixed;
   width: 70px;
   height: 100vh;
+
+  @media all and (max-width: 767px) {
+    padding-top: 50px;
+    width: 0;
+  }
 
   &:before {
     content: "";
@@ -790,6 +947,10 @@ menu {
     &:before {
       opacity: 1;
       transition: opacity 500ms;
+
+      @media all and (max-width: 767px) {
+        display: none;
+      }
     }
   }
 
@@ -879,6 +1040,10 @@ menu {
       margin-left: 15px;
       background: url("../img/icons/lang_arrow.svg") no-repeat center / contain;
       transform: rotate(-90deg);
+
+      @media all and (max-width: 767px) {
+        display: none;
+      }
     }
 
     &.no_after {
@@ -925,6 +1090,10 @@ menu {
     @media all and (max-width: 769px) {
       display: flex;
       justify-content: space-between;
+    }
+
+    @media all and (max-width: 767px) {
+      left: -30px;
     }
 
     .card {
@@ -981,6 +1150,11 @@ footer {
         padding: 50px 15px;
       }
 
+      @media all and (max-width: 767px) {
+        flex-wrap: wrap;
+        padding-left: 35px;
+      }
+
       &:before {
         content: "";
         box-shadow: 0 -3px 13px rgba(0, 0, 0, 0.07);
@@ -1014,11 +1188,23 @@ footer {
 
     .footer_logo_wrap {
       flex: 1 1 40%;
+
+      @media all and (max-width: 767px) {
+        flex: 1 1 100%;
+      }
     }
 
     .footer_contacs {
       margin-left: 45px;
       flex: 1 1 50%;
+
+      @media all and (max-width: 767px) {
+        margin-left: 0;
+      }
+    }
+
+    .mob_socials {
+      margin-top: 30px;
     }
 
     .right_part {
@@ -1044,6 +1230,11 @@ footer {
         order: 1;
       }
 
+      @media all and (max-width: 769px) {
+        padding-top: 75px;
+        padding-bottom: 100px;
+      }
+
       &:before {
         box-shadow: 0 -3px 21px rgba(0, 0, 0, 0.1);
         background-color: $blue;
@@ -1066,6 +1257,12 @@ footer {
         line-height: 45px;
         margin-bottom: 27px;
         text-align: center;
+
+        @media all and (max-width: 767px) {
+          color: #ffffff;
+          font-size: 35px;
+          line-height: 35px;
+        }
       }
 
       p {
@@ -1127,6 +1324,12 @@ footer {
           flex: 0 0 45%;
           margin-bottom: 20px;
         }
+
+        @media all and (max-width: 769px) {
+          flex: 0 0 50%;
+          font-size: 10px;
+          margin-bottom: 25px;
+        }
       }
     }
 
@@ -1171,7 +1374,7 @@ footer {
 
           @media all and (max-width: 769px) {
             flex: 0 0 100%;
-            margin-top: 40px;
+            margin-top: 20px;
             padding-top: 40px;
             margin-bottom: 20px;
             border-top: 1px solid #f9656b;
@@ -1212,6 +1415,20 @@ footer {
   @media all and (max-width: 1025px) {
     left: 15px;
     right: auto;
+  }
+
+  @media all and (max-width: 769px) {
+    position: relative;
+    bottom: auto;
+  }
+
+  @media all and (max-width: 767px) {
+    left: -15px;
+    width: calc(100% + 30px);
+
+    .main_buttons_swiper {
+      padding-left: 15px;
+    }
   }
 
   .card {
@@ -1287,6 +1504,10 @@ footer {
   height: 100vh;
   max-height: 1080px;
 
+  @media all and (max-width: 769px) {
+    height: auto;
+  }
+
   .container {
     height: 100vh;
     max-height: 1080px;
@@ -1354,6 +1575,13 @@ footer {
       max-width: 1100px;
     }
 
+    @media all and (max-width: 767px) {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      line-height: 40px;
+    }
+
     i {
       font-size: normal;
       color: $red;
@@ -1395,8 +1623,11 @@ footer {
     margin-bottom: 55px;
   }
 
-  .call_contact_modal {
-    width: 286px;
+  .btn_transparent {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 40px;
+    font-size: 10px;
   }
 
   .logo {
@@ -1404,6 +1635,10 @@ footer {
     position: absolute;
     top: 30px;
     right: 48px;
+
+    @media all and (max-width: 767px) {
+      display: none;
+    }
   }
 }
 
@@ -1437,8 +1672,16 @@ footer {
 .inner_banner_with_block {
   padding-top: 102px;
 
+  @media all and (max-width: 767px) {
+    padding-top: 0;
+  }
+
   .img_wrap {
     height: 450px;
+
+    @media all and (max-width: 767px) {
+      height: 812px;
+    }
   }
 
   &.with_video {
@@ -1450,6 +1693,10 @@ footer {
 
     .img_wrap {
       height: 620px;
+
+      @media all and (max-width: 767px) {
+        height: 812px;
+      }
     }
   }
 
@@ -1461,6 +1708,11 @@ footer {
     padding: 50px;
     background-color: $blue;
 
+    @media all and (max-width: 767px) {
+      top: 145px;
+      width: 85%;
+    }
+
     h2 {
       color: #ffffff;
       font-size: 52px;
@@ -1468,6 +1720,14 @@ footer {
       letter-spacing: 1.04px;
       line-height: 52px;
       text-transform: uppercase;
+
+      @media all and (max-width: 767px) {
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        line-height: 40px;
+      }
     }
 
     .text {
@@ -1516,6 +1776,12 @@ footer {
     z-index: 1;
     height: 390px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.33);
+
+    @media all and (max-width: 767px) {
+      width: 340px;
+      height: 225px;
+      margin-left: -15px;
+    }
   }
 
   .img_2 {
@@ -1523,6 +1789,12 @@ footer {
     height: 320px;
     margin-top: -122px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.33);
+
+    @media all and (max-width: 767px) {
+      width: 269px;
+      height: 175px;
+      margin-right: -15px;
+    }
   }
 
   h2 {
@@ -1540,6 +1812,10 @@ footer {
         width: 185px;
         margin-top: 190px;
         margin-bottom: 110px;
+
+        @media all and (max-width: 767px) {
+          margin-top: 230px;
+        }
       }
     }
   }
@@ -1559,6 +1835,13 @@ footer {
       top: 130px;
     }
 
+    @media all and (max-width: 767px) {
+      top: 30px;
+      width: 360px;
+      margin-left: 5px;
+      padding: 35px 20px;
+    }
+
     p {
       color: #ffffff;
       font-size: 12px;
@@ -1567,6 +1850,12 @@ footer {
       line-height: 18px;
       text-align: center;
       text-transform: uppercase;
+
+      @media all and (max-width: 767px) {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        line-height: 14px;
+      }
 
       span {
         display: block;
@@ -1577,6 +1866,13 @@ footer {
         letter-spacing: 1.04px;
         line-height: 52px;
         text-transform: uppercase;
+
+        @media all and (max-width: 767px) {
+          font-size: 40px;
+          font-weight: 700;
+          letter-spacing: 0.8px;
+          line-height: 40px;
+        }
 
         &.plus {
           &:after {
@@ -1613,6 +1909,11 @@ footer {
       background-color: $red;
     }
 
+    @media all and (max-width: 767px) {
+      background-color: transparent;
+      padding: 0 0 0 25px;
+    }
+
     &::before {
       position: absolute;
       content: "";
@@ -1634,6 +1935,10 @@ footer {
       font-weight: 300;
       line-height: 21px;
       margin-bottom: 50px;
+
+      @media all and (max-width: 767px) {
+        color: $dark;
+      }
     }
 
     .call_contact_modal {
@@ -1644,6 +1949,10 @@ footer {
       line-height: 21px;
       text-decoration: underline;
       text-transform: uppercase;
+
+      @media all and (max-width: 767px) {
+        color: $red;
+      }
 
       &:hover {
         text-decoration: none;
@@ -1659,6 +1968,10 @@ footer {
   h2 {
     @media all and (max-width: 1025px) {
       margin-bottom: 30px;
+    }
+
+    @media all and (max-width: 767px) {
+      margin-bottom: 35px;
     }
   }
 
@@ -1691,6 +2004,10 @@ footer {
   padding-bottom: 150px;
   background: url("../img/our_services_bg.jpg") no-repeat center / cover;
 
+  @media all and (max-width: 767px) {
+    padding-bottom: 100px;
+  }
+
   h2 {
     color: #ffffff;
     margin-bottom: 70px;
@@ -1720,6 +2037,10 @@ footer {
     text-transform: uppercase;
     margin-bottom: 3px;
 
+    a {
+      color: #ffffff;
+    }
+
     @media all and (max-width: 1025px) {
       margin-top: 12px;
       height: auto;
@@ -1733,11 +2054,14 @@ footer {
 
   li {
     display: block;
-    color: #ffffff;
     font-size: 16px;
     font-weight: 600;
     line-height: 16px;
     cursor: default;
+
+    a {
+      color: #ffffff;
+    }
 
     & + li {
       margin-top: 19px;
@@ -1755,10 +2079,8 @@ footer {
     margin-left: auto;
     margin-right: auto;
     margin-top: 38px;
-
-    @media all and (max-width: 1025px) {
-      display: block;
-    }
+    display: block;
+    line-height: 45px;
   }
 }
 
@@ -1928,6 +2250,10 @@ footer {
 #actions {
   padding-bottom: 200px;
 
+  @media all and (max-width: 767px) {
+    padding-bottom: 150px;
+  }
+
   h2 {
     margin-bottom: 54px;
   }
@@ -1950,6 +2276,11 @@ footer {
   padding-top: 100px;
   padding-bottom: 150px;
   background-color: $blue;
+
+  @media all and (max-width: 767px) {
+    padding-bottom: 100px;
+    padding-top: 150px;
+  }
 
   &.blog_list {
     padding-bottom: 300px;
@@ -2004,8 +2335,18 @@ footer {
     height: 808px;
     background: url("../img/map_bg.jpg") no-repeat center / cover;
 
+    @media all and (max-width: 767px) {
+      margin-left: -15px;
+      width: calc(100% + 30px);
+      height: 400px;
+    }
+
     &.contacts_page {
       height: 950px;
+
+      @media all and (max-width: 767px) {
+        height: 400px;
+      }
     }
 
     iframe {
@@ -2017,6 +2358,10 @@ footer {
   h2 {
     margin-top: 150px;
     margin-bottom: 60px;
+
+    @media all and (max-width: 767px) {
+      margin-top: 100px;
+    }
 
     &.contacts_page {
       text-transform: uppercase;
@@ -2048,6 +2393,10 @@ footer {
   .skarga_wrap {
     margin-top: 50px;
     margin-bottom: 250px;
+
+    @media all and (max-width: 767px) {
+      margin-bottom: 75px;
+    }
 
     .btn_color {
       margin-top: 15px;
@@ -2093,6 +2442,10 @@ footer {
     padding-bottom: 75px;
     margin-bottom: 30px;
     border-bottom: 1px solid #fff;
+
+    @media all and (max-width: 767px) {
+      padding-bottom: 40px;
+    }
   }
 }
 
@@ -2106,6 +2459,10 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 75px;
+
+  @media all and (max-width: 767px) {
+    padding-bottom: 50px;
+  }
 
   .time_date {
     color: #ffffff;
@@ -2124,6 +2481,13 @@ footer {
     letter-spacing: 1.04px;
     line-height: 52px;
     text-transform: uppercase;
+
+    @media all and (max-width: 767px) {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      line-height: 40px;
+    }
   }
 
   .under_title {
@@ -2132,6 +2496,14 @@ footer {
     font-weight: 700;
     line-height: 24px;
     margin-top: 20px;
+
+    @media all and (max-width: 767px) {
+      font-size: 16px;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+    }
   }
 }
 
@@ -2142,6 +2514,12 @@ footer {
     font-size: 22px;
     font-weight: 700;
     line-height: 22px;
+  }
+
+  h2 {
+    @media all and (max-width: 767px) {
+      margin-bottom: 34px;
+    }
   }
 
   ol {
@@ -2171,6 +2549,13 @@ footer {
     text-transform: uppercase;
     margin-top: 30px;
 
+    @media all and (max-width: 767px) {
+      margin-top: 0;
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
     &:hover {
       text-decoration: none;
     }
@@ -2199,6 +2584,11 @@ footer {
     margin-top: 50px;
     margin-bottom: 15px;
     display: block;
+
+    @media all and (max-width: 767px) {
+      height: 200px;
+      margin-bottom: 75px;
+    }
 
     &.video {
       &:after {
@@ -2281,6 +2671,10 @@ footer {
   .small_img {
     height: 368px;
     margin-bottom: 75px;
+
+    @media all and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
   }
 
   blockquote {
@@ -2296,6 +2690,10 @@ footer {
     text-transform: uppercase;
     padding-right: 100px;
 
+    @media all and (max-width: 767px) {
+      padding-right: 0;
+    }
+
     &:before {
       content: "";
       display: block;
@@ -2305,6 +2703,11 @@ footer {
       height: 29px;
       margin-right: 27px;
       background: url("../img/icons/quote_icon.svg") no-repeat center / contain;
+
+      @media all and (max-width: 767px) {
+        margin-left: 0;
+        margin-right: 12px;
+      }
     }
   }
 
@@ -2319,6 +2722,11 @@ footer {
     line-height: 22px;
     margin-bottom: 40px;
     margin-top: 100px;
+
+    @media all and (max-width: 767px) {
+      margin-top: 0;
+      text-align: center;
+    }
   }
 
   .share_article {
@@ -2357,11 +2765,12 @@ footer {
     padding-bottom: 300px;
 
     @media all and (max-width: 769px) {
-      padding-bottom: 100px;
+      padding-bottom: 150px;
     }
 
     h2 {
       margin-bottom: 54px;
+      text-transform: uppercase;
     }
   }
 }
@@ -2376,6 +2785,13 @@ footer {
 
   h2 {
     margin-bottom: 50px;
+
+    @media all and (max-width: 767px) {
+      text-transform: uppercase;
+      font-size: 40px;
+      line-height: 40px;
+      font-weight: 700;
+    }
   }
 
   .data {
@@ -2429,6 +2845,12 @@ footer {
 
   .img_wrap {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+    @media all and (max-width: 767px) {
+      margin-left: -20px;
+      margin-right: -20px;
+      height: 100%;
+    }
   }
 
   .about_wide {
@@ -2436,10 +2858,6 @@ footer {
 
     @media all and (max-width: 1025px) {
       margin-top: 0;
-    }
-
-    @media all and (max-width: 769px) {
-      display: none;
     }
   }
 
@@ -2452,6 +2870,12 @@ footer {
 
     @media all and (max-width: 1025px) {
       margin-top: 50px;
+    }
+
+    @media all and (max-width: 767px) {
+      margin-left: -15px;
+      width: calc(100% + 30px);
+      padding: 50px 17px;
     }
 
     &::before {
@@ -2482,12 +2906,21 @@ footer {
     padding-bottom: 50px;
   }
 
+  @media all and (max-width: 767px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .counters_wrap {
     display: flex;
     justify-content: space-between;
 
     @media all and (max-width: 769px) {
       flex-wrap: wrap;
+    }
+
+    @media all and (max-width: 767px) {
+      padding: 50px 50px 30px;
     }
 
     p {
@@ -2504,6 +2937,11 @@ footer {
         margin-bottom: 50px;
       }
 
+      @media all and (max-width: 767px) {
+        font-size: 10px;
+        margin-bottom: 20px;
+      }
+
       span {
         display: block;
         color: #ffffff;
@@ -2513,6 +2951,14 @@ footer {
         letter-spacing: 1.6px;
         line-height: 79px;
         text-transform: uppercase;
+
+        @media all and (max-width: 767px) {
+          color: #ffffff;
+          font-size: 40px;
+          font-weight: 700;
+          letter-spacing: 0.8px;
+          line-height: 40px;
+        }
 
         &.plus {
           &:after {
@@ -2545,6 +2991,11 @@ footer {
   padding-bottom: 150px;
   margin-bottom: 200px;
   background-color: $blue;
+
+  @media all and (max-width: 767px) {
+    padding-bottom: 100px;
+    margin-bottom: 150px;
+  }
 
   &:after {
     content: "";
@@ -2592,6 +3043,10 @@ footer {
 #our_team {
   margin-bottom: 100px;
 
+  @media all and (max-width: 767px) {
+    margin-bottom: 150px;
+  }
+
   h2 {
     margin-bottom: 50px;
   }
@@ -2624,6 +3079,10 @@ footer {
       line-height: 15px;
       text-transform: uppercase;
     }
+  }
+
+  .workers_swiper {
+    margin-right: -15px;
   }
 }
 
@@ -2723,6 +3182,10 @@ footer {
   margin-bottom: 200px;
   border-bottom: 1px solid #ced8dd;
 
+  @media all and (max-width: 767px) {
+    margin-bottom: 100px;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -2768,6 +3231,12 @@ footer {
       padding-bottom: 80px;
     }
 
+    @media all and (max-width: 767px) {
+      padding-top: 180px;
+      padding-left: 0;
+      padding-bottom: 100px;
+    }
+
     &:before {
       content: "";
       background-color: $blue;
@@ -2791,6 +3260,10 @@ footer {
 
   .cargo_ownres_img_2 {
     margin-top: -150px;
+
+    @media all and (max-width: 7676px) {
+      margin-top: -120px;
+    }
   }
 }
 
@@ -2809,6 +3282,11 @@ footer {
 
   @media all and (max-width: 769px) {
     background: url(../img/road.jpg) no-repeat bottom right 21% / cover;
+
+    @media all and (max-width: 767px) {
+      background: url(../img/road.jpg) no-repeat bottom right 27% / cover;
+      margin-bottom: 150px;
+    }
   }
 
   h2 {
@@ -2854,6 +3332,10 @@ footer {
       }
     }
 
+    @media all and (max-width: 767px) {
+      padding-bottom: 0px;
+    }
+
     &.left {
       padding-right: 150px;
       border-right: 70px $red solid;
@@ -2888,6 +3370,10 @@ footer {
           margin-top: 100px;
           background: url("../img/icons/arrow_right_rad.svg") no-repeat center;
         }
+
+        @media all and (max-width: 767px) {
+          margin-top: 50px;
+        }
       }
     }
 
@@ -2905,7 +3391,7 @@ footer {
         border-left: none;
       }
 
-      @media all and (max-width: 769px) {
+      @media all and (max-width: 767px) {
         padding-left: 0;
       }
 
@@ -2928,6 +3414,10 @@ footer {
           height: 70px;
           margin-top: 30px;
           background: url("../img/icons/arrow_left_rad.svg") no-repeat center;
+        }
+
+        @media all and (max-width: 767px) {
+          margin-top: 50px;
         }
       }
     }
@@ -3012,6 +3502,10 @@ footer {
   padding-top: 250px;
   margin-bottom: 150px;
 
+  @media all and (max-width: 767px) {
+    padding-top: 100px;
+  }
+
   .img_wrap {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   }
@@ -3041,6 +3535,10 @@ footer {
       margin-top: 50px;
       background-color: $blue;
       padding-bottom: 50px;
+    }
+
+    @media all and (max-width: 767px) {
+      padding-bottom: 100px;
     }
 
     &:before {
@@ -3127,6 +3625,11 @@ footer {
       margin-left: 0;
       margin-right: 0;
     }
+
+    @media all and (max-width: 767px) {
+      margin-top: 270px;
+      padding-top: 115px;
+    }
   }
 
   h3 {
@@ -3143,7 +3646,12 @@ footer {
       position: relative;
       top: auto;
       right: auto;
-      display: none;
+    }
+
+    @media all and (max-width: 767px) {
+      position: absolute;
+      top: -310px;
+      right: 15px;
     }
   }
 
@@ -3156,6 +3664,14 @@ footer {
       top: auto;
       right: auto;
       margin-top: 30px;
+    }
+
+    @media all and (max-width: 767px) {
+      position: absolute;
+      top: -220px;
+      margin-top: 0;
+      bottom: auto;
+      left: 15px;
     }
   }
 
@@ -3192,6 +3708,16 @@ footer {
     letter-spacing: normal;
     line-height: 25px;
   }
+
+  @media all and (max-width: 767px) {
+    .cropped_article.small .img_wrap {
+      max-width: calc(100vw - 30px);
+    }
+
+    .cropped_article.small .info {
+      margin-top: 0;
+    }
+  }
 }
 
 #error {
@@ -3205,6 +3731,12 @@ footer {
     padding-top: 30px;
   }
 
+  @media all and (max-width: 767px) {
+    margin-left: 0;
+    padding-left: 0;
+    background: url("../img/404_bg.jpg") no-repeat bottom right 20% / cover;
+  }
+
   .title {
     color: #ffffff;
     font-size: 167px;
@@ -3216,10 +3748,20 @@ footer {
     align-items: center;
     margin-bottom: 10px;
 
+    @media all and (max-width: 767px) {
+      font-size: 115px;
+    }
+
     img {
       height: 135px;
       margin-left: 15px;
       margin-right: 15px;
+
+      @media all and (max-width: 767px) {
+        height: 95px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
     }
   }
 
@@ -3346,7 +3888,6 @@ footer {
   transition: opacity 360ms;
 
   .modal {
-    padding: 75px 45px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -3357,6 +3898,15 @@ footer {
     opacity: 0;
     pointer-events: none;
     transition: opacity 360ms;
+
+    .inner {
+      padding: 75px 45px;
+
+      @media all and (max-width: 769px) {
+        overflow-y: auto;
+        max-height: 90vh;
+      }
+    }
 
     &.active {
       opacity: 1;
@@ -3373,6 +3923,7 @@ footer {
     left: 10px;
     background: url("../img/icons/modal_back_arrow.svg") no-repeat center /
       contain;
+    z-index: 2;
   }
 
   .close {
@@ -3382,6 +3933,7 @@ footer {
     width: 50px;
     height: 50px;
     background: $red url("../img/icons/close.svg") no-repeat center / 18px;
+    z-index: 2;
   }
 
   &.active {
@@ -3475,6 +4027,12 @@ footer {
     width: 100%;
     height: 100px;
     border-radius: 10px;
+  }
+
+  .s_mt25 {
+    @media all and (max-width: 767px) {
+      margin-top: 25px;
+    }
   }
 
   .drop_wrap {
@@ -3688,20 +4246,52 @@ footer {
     background: #f83e46 url("../img/modal_bg.jpg") no-repeat left center/50%
       100%;
 
+    @media all and (max-width: 767px) {
+      background: #f83e46;
+    }
+
+    .inner {
+      padding: 0;
+
+      @media all and (max-width: 767px) {
+        overflow-x: hidden;
+      }
+    }
+
     .close {
       background-color: $blue;
       z-index: 10;
+
+      @media all and (max-width: 767px) {
+        background-color: $red;
+      }
     }
 
     .btn_color {
       margin-top: 30px;
       margin-left: 25px;
+
+      @media all and (max-width: 769px) {
+        width: 200px;
+      }
     }
 
     .nav_warp {
       position: absolute;
       left: 70px;
       bottom: 50px;
+
+      @media all and (max-width: 769px) {
+        left: 75px;
+        bottom: 30px;
+      }
+
+      @media all and (max-width: 767px) {
+        position: relative;
+        left: 0;
+        bottom: auto;
+        margin-bottom: 20px;
+      }
     }
 
     ul {
@@ -3730,12 +4320,25 @@ footer {
 
     .left {
       padding: 50px 50px 150px;
+
+      @media all and (max-width: 767px) {
+        padding: 50px 30px;
+        background: url("../img/modal_bg.jpg") no-repeat top center / cover;
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     .right {
       padding: 50px;
       max-height: 550px;
       margin-right: -15px;
+
+      @media all and (max-width: 767px) {
+        max-height: none;
+        padding: 50px 30px;
+        margin-right: 0;
+      }
     }
   }
 }
