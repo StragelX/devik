@@ -1970,6 +1970,13 @@ menu.active .container {
   }
 }
 
+@media all and (max-width: 767px) {
+  menu.active .container {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
 menu.active:before {
   opacity: 1;
   transition: opacity 500ms;
@@ -2029,6 +2036,13 @@ menu .group {
     width: 60%;
     padding-right: 0;
     flex: none;
+  }
+}
+
+@media all and (max-width: 767px) {
+  menu .group {
+    width: 100%;
+    border-right: none;
   }
 }
 
@@ -2137,6 +2151,8 @@ menu .bottom_cards {
 @media all and (max-width: 767px) {
   menu .bottom_cards {
     left: -30px;
+    padding-left: 15px;
+    max-width: 95vw;
   }
 }
 

@@ -942,6 +942,11 @@ menu {
         width: calc(100% - 70px);
         margin-right: 70px;
       }
+
+      @media all and (max-width: 767px) {
+        width: 100%;
+        margin-right: 0;
+      }
     }
 
     &:before {
@@ -996,6 +1001,11 @@ menu {
       width: 60%;
       padding-right: 0;
       flex: none;
+    }
+
+    @media all and (max-width: 767px) {
+      width: 100%;
+      border-right: none;
     }
   }
 
@@ -1094,6 +1104,8 @@ menu {
 
     @media all and (max-width: 767px) {
       left: -30px;
+      padding-left: 15px;
+      max-width: 95vw;
     }
 
     .card {
