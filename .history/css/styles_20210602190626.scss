@@ -4376,12 +4376,9 @@ footer {
   }
 }
 
-#route_summary {
-  margin-bottom: 350px;
-}
-
 .route_summary {
   margin-top: 100px;
+  margin-bottom: 350px;
   height: 250px;
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
@@ -4391,71 +4388,7 @@ footer {
   align-items: stretch;
 
   .left {
-    background: $blue url("../img/route_summary.svg") no-repeat left 40px top
-      78px;
-    padding: 69px 45px 69px 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .point {
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 22px;
-    max-width: 250px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    & + .point {
-      margin-top: 48px;
-    }
-  }
-
-  .right {
-    padding: 60px 70px;
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 auto;
-
-    .r_line {
-      display: flex;
-      align-items: center;
-      margin-bottom: 12px;
-      flex: 1 1 45%;
-
-      img {
-        height: 36px;
-        margin-right: 20px;
-      }
-
-      p {
-        color: $blue;
-        font-family: "Proxima Nova";
-        font-size: 16px;
-        font-weight: 700;
-        letter-spacing: 0.32px;
-        line-height: 17px;
-      }
-
-      span {
-        font-weight: 300;
-        margin-left: 5px;
-
-        &.cost {
-          color: $red;
-          font-size: 45px;
-          font-weight: 700;
-        }
-      }
-    }
-  }
-
-  & + .btn_color {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    background-color: $blue;
+    padding: 69px 45px;
   }
 }

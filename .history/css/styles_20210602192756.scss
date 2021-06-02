@@ -4376,12 +4376,9 @@ footer {
   }
 }
 
-#route_summary {
-  margin-bottom: 350px;
-}
-
 .route_summary {
   margin-top: 100px;
+  margin-bottom: 350px;
   height: 250px;
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
@@ -4417,13 +4414,11 @@ footer {
     padding: 60px 70px;
     display: flex;
     flex-wrap: wrap;
-    flex: 1 1 auto;
 
-    .r_line {
+    .line {
       display: flex;
       align-items: center;
       margin-bottom: 12px;
-      flex: 1 1 45%;
 
       img {
         height: 36px;
@@ -4442,20 +4437,7 @@ footer {
       span {
         font-weight: 300;
         margin-left: 5px;
-
-        &.cost {
-          color: $red;
-          font-size: 45px;
-          font-weight: 700;
-        }
       }
     }
-  }
-
-  & + .btn_color {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
   }
 }
