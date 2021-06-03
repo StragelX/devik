@@ -5690,6 +5690,8 @@ footer .bottom_prat .copyright {
   height: 100vh;
   max-height: 1080px;
   margin-bottom: 100px;
+  padding-left: 0px;
+  padding-right: 20px;
 }
 
 #calc_route #map {
