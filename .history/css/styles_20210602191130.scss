@@ -138,7 +138,7 @@ $grey: #bababa;
 
 section {
   @media all and (max-width: 1367px) {
-    // overflow: hidden;
+    overflow: hidden;
   }
 
   &.padd {
@@ -161,7 +161,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 70px;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 
   @media all and (max-width: 767px) {
     padding-left: 0;
@@ -1125,7 +1125,6 @@ menu {
 }
 
 footer {
-  display: none;
   .container {
     @media all and (max-width: 1025px) {
       padding-left: 0;
@@ -2190,9 +2189,11 @@ footer {
 #clients_call {
   padding-top: 200px;
   margin-bottom: 200px;
+  padding-left: 44px;
 
   @media all and (max-width: 1025px) {
     padding-top: 100px;
+    padding-left: 15px;
   }
 
   @media all and (max-width: 769px) {
@@ -2213,12 +2214,6 @@ footer {
     margin-bottom: 50px;
   }
 
-  .nav_warp,
-  h2,
-  .text {
-    margin-left: 44px;
-  }
-
   .clients_swiper {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -2226,12 +2221,6 @@ footer {
     padding-right: 5px;
     margin-top: -20px;
     width: 1050px;
-
-    @media all and (max-width: 1800px) {
-      width: 100%;
-      margin-left: -10px;
-      margin-right: -10px;
-    }
 
     .one_slide {
       height: 510px;
@@ -4387,12 +4376,9 @@ footer {
   }
 }
 
-#route_summary {
-  margin-bottom: 350px;
-}
-
 .route_summary {
   margin-top: 100px;
+  margin-bottom: 350px;
   height: 250px;
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.07);
   border-radius: 20px;
@@ -4402,8 +4388,7 @@ footer {
   align-items: stretch;
 
   .left {
-    background: $blue url("../img/route_summary.svg") no-repeat left 40px top
-      78px;
+    background: $blue url('../img/route_icon.svg') no-repeat left 70px center / ;
     padding: 69px 45px 69px 100px;
     display: flex;
     flex-direction: column;
@@ -4415,9 +4400,6 @@ footer {
     font-size: 22px;
     font-weight: 700;
     line-height: 22px;
-    max-width: 250px;
-    overflow: hidden;
-    text-overflow: ellipsis;
 
     & + .point {
       margin-top: 48px;
@@ -4426,47 +4408,5 @@ footer {
 
   .right {
     padding: 60px 70px;
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 auto;
-
-    .r_line {
-      display: flex;
-      align-items: center;
-      margin-bottom: 12px;
-      flex: 1 1 45%;
-
-      img {
-        height: 36px;
-        margin-right: 20px;
-      }
-
-      p {
-        color: $blue;
-        font-family: "Proxima Nova";
-        font-size: 16px;
-        font-weight: 700;
-        letter-spacing: 0.32px;
-        line-height: 17px;
-      }
-
-      span {
-        font-weight: 300;
-        margin-left: 5px;
-
-        &.cost {
-          color: $red;
-          font-size: 45px;
-          font-weight: 700;
-        }
-      }
-    }
-  }
-
-  & + .btn_color {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
   }
 }
