@@ -225,6 +225,44 @@
 
                 <div class="col_xl_5">
                     <h2 class="two_rad_lines">Розрахувати маршрут</h2>
+
+                    <div class="calc_right">
+
+                        <div class="locations_group">
+                            <div class="input_wrap">
+                                <input type="text" name="location1" required>
+                                <label for="location1" class="label">Початкова точка</label>
+                            </div>
+    
+                            <div class="input_wrap">
+                                <input type="text" name="location2" required>
+                                <label for="location2" class="label">Місце призначення</label>
+                            </div>
+
+                            <button class="switch_locations"></button>
+
+                            <button class="add_loc_group">Додати пункт призначення</button>
+                        </div>
+
+                        <div class="input_wrap">
+                            <input type="text" name="cargo_weigth" required>
+                            <label for="cargo_weigth" class="label">Вага вантажу</label>
+                        </div>
+
+                        <div class="drop_wrap">
+                            <div class="selected">Тип оплати</div>
+        
+                            <div class="drop">
+                                <p class="link hover_tr">Тип оплати 1</p>
+                                <p class="link hover_tr">Тип оплати 2</p>
+                                <p class="link hover_tr">Тип оплати 3</p>
+        
+                                <button class="clear hover_tr">Очистити</button>
+                            </div>
+                        </div>
+
+                        <button class="btn_color">Розрахувати вартість</button>
+                    </div>
                 </div>
             </div>
         </section>

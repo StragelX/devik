@@ -5710,6 +5710,232 @@ footer .bottom_prat .copyright {
   margin-bottom: 350px;
 }
 
+.calc_right {
+  width: 500px;
+  padding-left: 60px;
+}
+
+.calc_right .locations_group {
+  margin-bottom: 20px;
+}
+
+.calc_right .locations_group:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 14px;
+  left: -55px;
+  width: 40px;
+  height: 110px;
+  background: url("../img/route_summary_top.svg") no-repeat center/contain;
+}
+
+.calc_right .switch_locations {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 48px;
+  height: 48px;
+  background: url("../img/switch_loc.svg") no-repeat center/contain;
+}
+
+.calc_right .add_loc_group {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: #f83e46;
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 21px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.calc_right .add_loc_group:before {
+  content: "";
+  display: block;
+  width: 33px;
+  height: 33px;
+  background: url("../img/plus_icon.svg") no-repeat center/contain;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.calc_right .add_loc_group:hover {
+  text-decoration: none;
+}
+
+.calc_right .btn_color {
+  display: block;
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+.calc_right .input_wrap {
+  width: 350px;
+}
+
+.calc_right .input_wrap + .input_wrap {
+  margin-top: 30px;
+}
+
+.calc_right .label {
+  color: #00334c;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 21px;
+  position: absolute;
+  top: 11px;
+  left: 31px;
+  transition: top 180ms;
+  pointer-events: none;
+}
+
+.calc_right input:not([type="submit"]),
+.calc_right textarea {
+  width: 100%;
+  padding: 15px 30px;
+  height: 45px;
+  border-radius: 23px;
+  border: 1px solid #bababa;
+  color: #00334c;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  background-color: transparent;
+}
+
+.calc_right input:not([type="submit"]):focus + .label, .calc_right input:not([type="submit"]).filled + .label,
+.calc_right textarea:focus + .label,
+.calc_right textarea.filled + .label {
+  top: -25px;
+  transition: top 180ms;
+}
+
+.calc_right input:not([type="submit"]).invalid,
+.calc_right textarea.invalid {
+  color: #f83e46;
+  border: 1px solid #f83e46;
+}
+
+.calc_right input:not([type="submit"]).invalid + .label,
+.calc_right textarea.invalid + .label {
+  color: #f83e46;
+  top: -25px;
+  transition: top 180ms;
+}
+
+.calc_right .drop_wrap {
+  width: 350px;
+  margin-top: 30px;
+}
+
+.calc_right .drop_wrap .selected {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 30px;
+  height: 45px;
+  border-radius: 23px;
+  border: 1px solid #bababa;
+  color: #00334c;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  background-color: transparent;
+}
+
+.calc_right .drop_wrap .selected:after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 27px;
+  width: 12px;
+  height: 12px;
+  background: url("../img/arrow_blue.svg") no-repeat center/contain;
+  transform: rotate(0);
+  transition: transform 180ms;
+}
+
+.calc_right .drop_wrap .selected.active:after {
+  transform: rotate(180deg);
+  transition: transform 180ms;
+}
+
+.calc_right .drop_wrap .drop {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 18px 30px 25px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  background-color: #00334c;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms;
+}
+
+.calc_right .drop_wrap .drop.active {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 180ms;
+}
+
+.calc_right .drop_wrap .drop .subtitle {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 18px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 7px;
+}
+
+.calc_right .drop_wrap .drop .link {
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+.calc_right .drop_wrap .drop .link + .link {
+  margin-top: 7px;
+}
+
+.calc_right .drop_wrap .drop .link + .subtitle {
+  margin-top: 20px;
+}
+
+.calc_right .drop_wrap .drop .clear {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
 .route_summary {
   margin-top: 100px;
   height: 250px;
