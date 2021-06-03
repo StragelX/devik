@@ -219,11 +219,11 @@
     <main>
         <section id="calc_route">
             <div class="row">
-                <div class="col_xl_7 col_l_6 col_m_12 col_s_12 order_m_2 order_s_2">
+                <div class="col_xl_7 col_l_12 col_m_12 col_s_12">
                     <div id="map"></div>
                 </div>
 
-                <div class="col_xl_5 col_l_6 col_m_12 col_s_12 order_m_1 order_s_1">
+                <div class="col_xl_5 col_l_12 col_m_12 col_s_12">
                     <h2 class="two_rad_lines">Розрахувати маршрут</h2>
 
                     <div class="calc_right">
@@ -437,55 +437,484 @@
         </div>
     </footer>
 
-    <div class="modal_overlay active">
-        <div class="modal article active" id="article_modal">
+    <div class="modal_overlay ">
+        <div class="modal small " id="contact_us_modal">
             <button class="close hover_tr last"></button>
 
             <div class="inner">
-                <h1 class="two_rad_lines">
-                    Акція річна накопичувальна «VIP СЕГМЕНТ»
-                </h1>
+                <h2 class="left_rad_line">
+                    Зв‘язатися з нами
+                </h2>
 
-                <p class="under_title">
-                    З «Девік» працюй — подарунки рахуй
-                </p>
+                <div class="input_wrap">
+                    <input type="text" name="name" required>
+                    <label for="name" class="label">Ім’я *</label>
+                </div>
 
+                <div class="input_wrap">
+                    <input type="text" name="tel" class="phone" required>
+                    <label for="tel" class="label">Номер телефону *</label>
+                </div>
+
+                <div class="input_wrap">
+                    <input type="email" name="email">
+                    <label for="email" class="label">Email</label>
+                </div>
+
+                <div class="input_wrap">
+                    <textarea name="msg"></textarea>
+                    <label for="msg" class="label">Написати коментар</label>
+                </div>
+
+                <input type="submit" class="btn_color" value="Надіслати заявку">
+            </div>
+        </div>
+
+        <div class="modal small " id="free_transport">
+            <button class="close hover_tr"></button>
+
+            <div class="inner">
+                <h2 class="left_rad_line">
+                    Надати вільний транспорт
+                </h2>
+    
+                <div class="input_wrap">
+                    <input type="text" name="name" required>
+                    <label for="name" class="label">Ім’я *</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <input type="text" name="tel" class="phone" required>
+                    <label for="tel" class="label">Номер телефону *</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <input type="email" name="email">
+                    <label for="email" class="label">Email</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <textarea name="msg"></textarea>
+                    <label for="msg" class="label">Написати коментар</label>
+                </div>
+    
+                <input type="submit" class="btn_color" value="Надіслати заявку">
+            </div>
+        </div>
+
+        <div class="modal small " id="get_service">
+            <button class="close hover_tr"></button>
+
+            <div class="inner">
+                <h2 class="left_rad_line">
+                    Замовити Послугу
+                </h2>
+    
+                <div class="input_wrap">
+                    <p class="text">Оберіть послугу</p>
+    
+                    <div class="drop_wrap">
+                        <div class="selected">Оберіть послугу</div>
+    
+                        <div class="drop">
+                            <p class="subtitle">Транспортні послуги</p>
+    
+                            <p class="link hover_tr">Перевезення по Україні</p>
+                            <p class="link hover_tr">Міжнародні перевезення</p>
+                            <p class="link hover_tr">Перевезення збірних грузів</p>
+    
+                            <p class="subtitle">Митно-Брокерські послуги</p>
+    
+                            <p class="link hover_tr">Митно-Брокерські послуги</p>
+    
+                            <p class="subtitle">Складська Логістика</p>
+    
+                            <p class="link hover_tr">Фулфілмент</p>
+                            <p class="link hover_tr">Кросдокінг</p>
+    
+                            <p class="link hover_tr">За типом транспорту</p>
+    
+                            <p class="link hover_tr">Автоперевезення</p>
+                            <p class="link hover_tr">Залізнодорожні перевезення</p>
+                            <p class="link hover_tr">Авіаперевезення</p>
+                            <p class="link hover_tr">Морські перевезення</p>
+    
+                            <button class="clear hover_tr">Очистити</button>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="input_wrap">
+                    <input type="text" name="name" required>
+                    <label for="name" class="label">Ім’я *</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <input type="text" name="tel" class="phone" required>
+                    <label for="tel" class="label">Номер телефону *</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <input type="email" name="email">
+                    <label for="email" class="label">Email</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <textarea name="msg"></textarea>
+                    <label for="msg" class="label">Написати коментар</label>
+                </div>
+    
+                <input type="submit" class="btn_color" value="Замовити">
+            </div>
+        </div>
+
+        <div class="modal small " id="get_call">
+            <button class="close hover_tr"></button>
+
+            <div class="inner">
+                <h2 class="left_rad_line">
+                    Передзвонити Вам?
+                </h2>
+    
+                <div class="input_wrap">
+                    <input type="text" name="tel" class="phone" required>
+                    <label for="tel" class="label">Номер телефону *</label>
+                </div>
+    
+                <input type="submit" class="btn_color" value="Передзвонити">
+    
+                <div class="or_wrap">
+                    <p class="or">або</p>
+    
+                    <div class="tels">
+                        <a href="tel:+38 (098) 156 56 05" class="hover_tr">+38 (098) 156 56 05</a>
+                        <a href="tel:+38 (098) 156 56 05" class="hover_tr">+38 (098) 156 56 05</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal small " id="thanks">
+            <button class="close hover_tr"></button>
+
+            <div class="inner">
+                <h2 class="left_rad_line">
+                    Дякуємо, вашу заявку прийнято!
+                </h2>
+    
                 <p class="text">
-                    Логістична компанія «Девік» для своїх партнерів проводить акцію з гарантованими подарунками при проходженні кожного кроку (кількості) завершених рейсів. <br><br>
-                    Умова — виконати кількість рейсів (крок) з внутрішніх або міжнародних перевезень.
+                    Наш менеджер зв’яжеться з вами найближчим часом для узгодження всіх деталей.
                 </p>
+    
+                <a href="/" class="btn_color">На головну</a>
+            </div>
+        </div>
 
-                <h4>
-                    В цілому, можна розділити вантажоперевізників за наступними принципами:
-                </h4>
+        <div class="modal small " id="sorry">
+            <button class="close hover_tr"></button>
 
-                <ul class="with_numders">
-                    <li>
-                        Компанії, що займають певним видом транспорту - авіаперевезеннями, ж/д, автомобільними перевезеннями, експрес-доставкою та ін.
-                    </li>
-                    <li>
-                        Компанії, що спеціалізуються на певному напрямку - наприклад, на доставці з Азії або навіть тільки доставки з Китаю; компанії, що працюють тільки на імпорт, компанії, що працюють лише на експорт;
-                    </li>
-                    <li>
-                        Транспортні компанії, що спеціалізуються на певному вигляді вантажів-небезпечні вантажі, наливні та ін.
-                    </li>
-                    <li>
-                        Компанії, що працюють тільки з проектними вантажами - великими обсягами.
-                    </li>
-                    <li>
-                        Компанії, що займають певним видом транспорту - авіаперевезеннями, ж/д, автомобільними перевезеннями, експрес-доставкою та ін.
-                    </li>
-                </ul>
-
-                <blockquote>
-                    Звичайно, існують і великі транспортні компанії з розгалуженою мережею філій або мають партнерів у багатьох країнах світу. Але, як правило, і у таких компаній буде своя спрямованість.
-                </blockquote>
-
+            <div class="inner">
+                <h2 class="left_rad_line">
+                    Дякуємо за заявку
+                </h2>
+    
                 <p class="text">
-                    Контактна особа зі сторони компанії «Девік» інформує відповідальну особу партнера про кількість рейсів по Viber або телефон.
-                        Питання та відповіді за номером: <b>+38067-670-59-52</b>
-                        або на Mail:  <a href="">devik.sl@devik.com.ua</a>
+                    Ми отримали вашу заявку. Наш менеджер зв’яжеться з вами найближчим часом для уточнення деталей.
                 </p>
+    
+                <a href="/" class="btn_color">На головну</a>
+            </div>
+        </div>
+
+        <div class="modal small " id="sorry">
+            <button class="close hover_tr"></button>
+
+            <div class="inner">
+                <h2 class="left_rad_line">
+                    Вибачте за незручності
+                </h2>
+    
+                <p class="text">
+                    Даний функціонал знаходиться на етапі розробки
+                </p>
+    
+                <a href="/" class="btn_color">На головну</a>
+            </div>
+        </div>
+
+        <div class="modal small " id="skarga">
+            <button class="close hover_tr"></button>
+
+            <div class="inner">
+                <h2 class="left_rad_line">
+                    Зв‘язатися з нами
+                </h2>
+    
+                <div class="input_wrap">
+                    <input type="text" name="name" required>
+                    <label for="name" class="label">Ім’я *</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <input type="text" name="tel" class="phone" required>
+                    <label for="tel" class="label">Номер телефону *</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <input type="email" name="email">
+                    <label for="email" class="label">Email</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <textarea name="msg"></textarea>
+                    <label for="msg" class="label">Написати коментар</label>
+                </div>
+    
+                <input type="submit" class="btn_color" value="Залишити заявку">
+            </div>
+        </div>
+
+        <div class="modal small " id="partnership">
+            <button class="close hover_tr"></button>
+
+            <div class="inner">
+                <h2 class="left_rad_line">
+                    Зв‘язатися з нами
+                </h2>
+    
+                <div class="input_wrap">
+                    <input type="text" name="name" required>
+                    <label for="name" class="label">Ім’я *</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <input type="text" name="tel" class="phone" required>
+                    <label for="tel" class="label">Номер телефону *</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <input type="email" name="email">
+                    <label for="email" class="label">Email</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <textarea name="msg"></textarea>
+                    <label for="msg" class="label">Написати коментар</label>
+                </div>
+    
+                <input type="submit" class="btn_color" value="Залишити заявку">
+            </div>
+        </div>
+
+        <div class="modal small " id="order_service">
+            <button class="close hover_tr"></button>
+
+            <div class="inner">
+                <h2 class="left_rad_line">
+                    Надати вільний транспорт
+                </h2>
+    
+                <div class="input_wrap">
+                    <p class="text">Оберіть послугу</p>
+    
+                    <div class="drop_wrap">
+                        <div class="selected">Оберіть послугу</div>
+    
+                        <div class="drop">
+                            <p class="subtitle">Транспортні послуги</p>
+    
+                            <p class="link hover_tr">Перевезення по Україні</p>
+                            <p class="link hover_tr">Міжнародні перевезення</p>
+                            <p class="link hover_tr">Перевезення збірних грузів</p>
+    
+                            <p class="subtitle">Митно-Брокерські послуги</p>
+    
+                            <p class="link hover_tr">Митно-Брокерські послуги</p>
+    
+                            <p class="subtitle">Складська Логістика</p>
+    
+                            <p class="link hover_tr">Фулфілмент</p>
+                            <p class="link hover_tr">Кросдокінг</p>
+    
+                            <p class="link hover_tr">За типом транспорту</p>
+    
+                            <p class="link hover_tr">Автоперевезення</p>
+                            <p class="link hover_tr">Залізнодорожні перевезення</p>
+                            <p class="link hover_tr">Авіаперевезення</p>
+                            <p class="link hover_tr">Морські перевезення</p>
+    
+                            <button class="clear hover_tr">Очистити</button>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="input_wrap">
+                    <input type="text" name="name" required>
+                    <label for="name" class="label">Ім’я *</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <input type="text" name="tel" class="phone" required>
+                    <label for="tel" class="label">Номер телефону *</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <input type="email" name="email">
+                    <label for="email" class="label">Email</label>
+                </div>
+    
+                <div class="input_wrap">
+                    <textarea name="msg"></textarea>
+                    <label for="msg" class="label">Замовити</label>
+                </div>
+    
+                <input type="submit" class="btn_color" value="Надіслати заявку">
+            </div>
+        </div>
+
+        <div class="modal " id="cv_thanks">
+            <button class="close hover_tr"></button>
+
+            <div class="inner">
+                <h2 class="left_rad_line">
+                    Дякуємо, ми отримали ваше резюме!
+                </h2>
+    
+                <p class="text">
+                    Цінуємо вашу зацікавленість до нашої компанії. Наш HR розгляне ваше резюме і надасть зворотний зв’язок найближчим часом.
+                </p>
+    
+                <a href="/" class="btn_color">На головну</a>
+            </div>
+        </div>
+
+        <div class="modal " id="cv_inner">
+            <button class="back_btn hover_tr"></button>
+            <button class="close hover_tr"></button>
+
+            <div class="inner">
+                <h2 class="left_rad_line">
+                    Менеджер-логіст
+                </h2>
+    
+                <div class="row">
+                    <div class="col_xl_6 col_l_6 col_m_6 col_s_12">
+                        <div class="input_wrap">
+                            <input type="text" name="name" required>
+                            <label for="name" class="label">Ім’я *</label>
+                        </div>
+            
+                        <div class="input_wrap">
+                            <input type="text" name="tel" class="phone" required>
+                            <label for="tel" class="label">Номер телефону *</label>
+                        </div>
+            
+                        <div class="input_wrap">
+                            <input type="text" name="cv">
+                            <label for="cv" class="label">Посилання на резюме</label>
+                        </div>
+                    </div>
+    
+                    <div class="col_xl_6 col_l_6 col_m_6 col_s_12">
+                        <div class="input_wrap s_mt25">
+                            <textarea name="msg"></textarea>
+                            <label for="msg" class="label">Написати коментар</label>
+                        </div>
+                    </div>
+                </div>
+    
+                <input type="submit" class="btn_color" value="Відправити резюме">
+            </div>
+        </div>
+
+        <div class="modal vacancy" id="vacancy">
+            <button class="close hover_tr"></button>
+
+            <div class="inner">
+                <div class="row">
+                    <div class="col_xl_5 col_l_5 col_m_5 col_s_12">
+                        <div class="left">
+                            <h2 class="left_rad_line order_s_2">
+                                Менеджер-логіст
+                            </h2>
+    
+                            <p class="text order_s_3">
+                                Компанія Devik пропонує вакансію менеджера з логістики.
+                            </p>
+    
+                            <button class="btn_color order_s_4">Подати резюме</button>
+    
+                            <div class="nav_warp order_s_1">
+                                <div class="prev" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-e9a72f53759f4f76">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10"><g><g><path fill="#fff" d="M11.25 4.386L7.207.343a.608.608 0 0 0-.433-.179.608.608 0 0 0-.434.179L5.973.71a.62.62 0 0 0 0 .872l2.359 2.363H.838a.598.598 0 0 0-.605.603v.519c0 .338.267.63.605.63h7.52L5.974 8.072a.604.604 0 0 0 0 .86l.367.367c.116.115.27.178.434.178a.608.608 0 0 0 .433-.18l4.043-4.042a.609.609 0 0 0 .179-.435.609.609 0 0 0-.18-.435z"></path></g></g></svg>
+                                </div>
+    
+                                <div class="next" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-e9a72f53759f4f76">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10"><g><g><path fill="#fff" d="M11.25 4.386L7.207.343a.608.608 0 0 0-.433-.179.608.608 0 0 0-.434.179L5.973.71a.62.62 0 0 0 0 .872l2.359 2.363H.838a.598.598 0 0 0-.605.603v.519c0 .338.267.63.605.63h7.52L5.974 8.072a.604.604 0 0 0 0 .86l.367.367c.116.115.27.178.434.178a.608.608 0 0 0 .433-.18l4.043-4.042a.609.609 0 0 0 .179-.435.609.609 0 0 0-.18-.435z"></path></g></g></svg>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col_xl_6 xl_offset_1 col_l_6 l_offset_1 col_m_6 m_offset_1 col_s_12">
+                        <div class="right custom_scroll_bar" data-simplebar>
+                            <h3>Якщо ви маєте:</h3>
+    
+                            <ul>
+                                <li>— Досвід роботи у логістичній, транспортній, експедиційній компанії (бажаний)</li>
+                                <li>— Знання Lardi-Trans, Della, бажано;</li>
+                                <li>— Навички роботи в 1С, Bitrix 24;</li>
+                                <li>— Здатність швидко навчатися.</li>
+                            </ul>
+    
+                            <h3>Ваша роль буде:</h3>
+    
+                            <ul>
+                                <li>
+                                    — Пошук транспорту відповідно до запитів від клієнтів;
+                                </li>
+    
+                                <li>
+                                    — Організація вантажних перевезень;
+                                </li>
+    
+                                <li>
+                                    — Планування, організація, супровід і контроль перевезень автомобільним транспортом;
+                                </li>
+    
+                                <li>
+                                    — Контроль комплектності та оформлення заявок, товарно-супровідної документації;
+                                </li>
+    
+                                <li>
+                                    — Розширення бази перевізників;
+                                </li>
+    
+                                <li>
+                                    — Ведення звітності та документообігу;
+                                </li>
+    
+                                <li>
+                                    — Контроль комплектності та оформлення заявок, товарно-супровідної документації;
+                                </li>
+    
+                                <li>
+                                    — Розширення бази перевізників;
+                                </li>
+    
+                                <li>
+                                    — Ведення звітності та документообігу;
+                                </li>
+    
+                                <li>
+                                    — Ведення бази в CRM-системі.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -692,7 +1121,7 @@
 </script>
 
 <script src="js/jquery.maskedinput.js"></script>
-<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+<!-- <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script> -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/counter.js"></script>
 <script src="js/scripts.js"></script>

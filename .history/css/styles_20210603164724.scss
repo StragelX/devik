@@ -4771,13 +4771,9 @@ footer {
 
 .modal_overlay .modal.article {
   background: #fff;
-  width: 1204px;
-  box-shadow: 0 0 31px rgba(0, 0, 0, 0.14);
 
   .inner {
     padding: 100px;
-    max-height: 90vh;
-    overflow-x: auto;
 
     h1 {
       color: $blue;
@@ -4786,138 +4782,6 @@ footer {
       line-height: 52px;
       text-transform: uppercase;
       margin-bottom: 38px;
-
-      @media all and (max-width: 767px) {
-        font-size: 40px;
-        font-weight: 700;
-        letter-spacing: 0.8px;
-        line-height: 40px;
-      }
-    }
-
-    .under_title {
-      color: $blue;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 24px;
-      margin-top: 20px;
-      margin-bottom: 75px;
-
-      @media all and (max-width: 767px) {
-        font-size: 16px;
-        color: #ffffff;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 24px;
-      }
-    }
-
-    .text {
-      color: $dark;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 21px;
-      margin-bottom: 50px;
-      padding-left: 0;
-
-      b {
-        font-weight: 700;
-      }
-    }
-
-    h4 {
-      color: $red;
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 22px;
-      margin-bottom: 40px;
-      margin-top: 100px;
-    }
-
-    ul {
-      margin-bottom: 100px;
-
-      li {
-        display: flex;
-        color: $blue;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 24px;
-        text-align: left;
-
-        &::before {
-          content: "";
-          flex: none;
-          width: 25px;
-          height: 25px;
-          margin-right: 20px;
-          background: url("../img/icons/list_icon.svg") no-repeat center /
-            contain;
-        }
-
-        & + li {
-          margin-top: 36px;
-        }
-      }
-
-      &.with_numders {
-        counter-reset: (list);
-        li {
-          counter-increment: (list);
-
-          &::before {
-            background: none;
-            content: counter(list);
-            color: $red;
-            font-size: 22px;
-            font-weight: 700;
-            line-height: 22px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            border: 1px solid $blue;
-            background-color: #ffffff;
-          }
-        }
-      }
-    }
-
-    blockquote {
-      margin-top: 100px;
-      margin-bottom: 100px;
-      display: flex;
-      color: $blue;
-      font-size: 25px;
-      font-weight: 700;
-      font-style: italic;
-      letter-spacing: 1.25px;
-      line-height: 32px;
-      text-transform: uppercase;
-      padding-right: 100px;
-
-      @media all and (max-width: 767px) {
-        padding-right: 0;
-      }
-
-      &:before {
-        content: "";
-        display: block;
-        margin-left: 32px;
-        flex: none;
-        width: 41px;
-        height: 29px;
-        margin-right: 27px;
-        background: url("../img/icons/quote_icon.svg") no-repeat center /
-          contain;
-
-        @media all and (max-width: 767px) {
-          margin-left: 0;
-          margin-right: 12px;
-        }
-      }
     }
   }
 }
