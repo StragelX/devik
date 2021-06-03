@@ -1133,12 +1133,6 @@ a h6 {
   transition: background-color 180ms, color 180ms;
 }
 
-@media all and (max-width: 1367px) {
-  section {
-    overflow: hidden;
-  }
-}
-
 section.padd {
   padding-left: 44px;
   padding-right: 44px;
@@ -1162,7 +1156,6 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 70px;
-  overflow-x: hidden;
 }
 
 @media all and (max-width: 767px) {
@@ -2172,6 +2165,10 @@ menu .bottom_cards {
   menu .bottom_cards .card + .card {
     margin-left: 10px;
   }
+}
+
+footer {
+  display: none;
 }
 
 @media all and (max-width: 1025px) {
@@ -3348,13 +3345,11 @@ footer .bottom_prat .copyright {
 #clients_call {
   padding-top: 200px;
   margin-bottom: 200px;
-  padding-left: 44px;
 }
 
 @media all and (max-width: 1025px) {
   #clients_call {
     padding-top: 100px;
-    padding-left: 15px;
   }
 }
 
@@ -3378,6 +3373,12 @@ footer .bottom_prat .copyright {
   margin-bottom: 50px;
 }
 
+#clients_call .nav_warp,
+#clients_call h2,
+#clients_call .text {
+  margin-left: 44px;
+}
+
 #clients_call .clients_swiper {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -3385,6 +3386,14 @@ footer .bottom_prat .copyright {
   padding-right: 5px;
   margin-top: -20px;
   width: 1050px;
+}
+
+@media all and (max-width: 1800px) {
+  #clients_call .clients_swiper {
+    width: 100%;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
 }
 
 #clients_call .clients_swiper .one_slide {

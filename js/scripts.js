@@ -104,9 +104,29 @@ $( document ).ready(function() {
 
     if ($('.clients_swiper')) {
         const clients_swiper = new Swiper('.clients_swiper', {
-            slidesPerView: 3,
-            spaceBetween: 30,
             loop: true,
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.1, 
+                    spaceBetween: 0
+                },
+
+                750: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+    
+                1000: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 30
+                },
+    
+                1400: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            },
     
             navigation: {
               nextEl: '.clients_swiper_prev',
@@ -203,7 +223,7 @@ $( document ).ready(function() {
 
     if ($('.main_buttons_swiper') && $( document ).width() < 770) {
         const main_buttons_swiper = new Swiper('.main_buttons_swiper', {
-            slidesPerView: 3.5,
+            slidesPerView: 2,
             spaceBetween: 20
         });
     }
