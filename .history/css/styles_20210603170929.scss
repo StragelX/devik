@@ -4786,13 +4786,6 @@ footer {
       line-height: 52px;
       text-transform: uppercase;
       margin-bottom: 38px;
-
-      @media all and (max-width: 767px) {
-        font-size: 40px;
-        font-weight: 700;
-        letter-spacing: 0.8px;
-        line-height: 40px;
-      }
     }
 
     .under_title {
@@ -4802,14 +4795,6 @@ footer {
       line-height: 24px;
       margin-top: 20px;
       margin-bottom: 75px;
-
-      @media all and (max-width: 767px) {
-        font-size: 16px;
-        color: #ffffff;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 24px;
-      }
     }
 
     .text {

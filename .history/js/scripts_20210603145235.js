@@ -241,7 +241,9 @@ $( document ).ready(function() {
         });
     }
 
-    
+    // if ( $('.custom_scroll_bar') ) {
+    //     new SimpleBar(document.getElementsByClassName('custom_scroll_bar'));
+    // }
 
 
 
@@ -249,14 +251,10 @@ $( document ).ready(function() {
     $('.switch_locations').click(function(){
         var val1 = $(this).siblings('.input_wrap').first().find('input').val();
         $(this).siblings('.input_wrap').first().find('input').val($(this).siblings('.input_wrap').last().find('input').val())
-        $(this).siblings('.input_wrap').last().find('input').val(val1);
+        $(this).siblings('.input_wrap').last().find('input').val(val1)
     })
 
     $('.add_loc_group').click(function(){
-        $(this).siblings('#locations_group_0').clone(true).insertAfter('.locations_group');
+        
     })
-
-    if ( $('.custom_scroll_bar') ) {
-        new SimpleBar(document.getElementsByClassName('custom_scroll_bar'));
-    }
 });

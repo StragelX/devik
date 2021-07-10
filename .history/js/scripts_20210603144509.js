@@ -241,22 +241,16 @@ $( document ).ready(function() {
         });
     }
 
-    
+    if ( $('.custom_scroll_bar') ) {
+        new SimpleBar(document.getElementsByClassName('custom_scroll_bar'));
+    }
 
 
 
     // new
     $('.switch_locations').click(function(){
         var val1 = $(this).siblings('.input_wrap').first().find('input').val();
-        $(this).siblings('.input_wrap').first().find('input').val($(this).siblings('.input_wrap').last().find('input').val())
-        $(this).siblings('.input_wrap').last().find('input').val(val1);
+        var val2 = $(this).siblings('.input_wrap').last().find('input').val();
+        console.log(val1, val2)
     })
-
-    $('.add_loc_group').click(function(){
-        $(this).siblings('#locations_group_0').clone(true).insertAfter('.locations_group');
-    })
-
-    if ( $('.custom_scroll_bar') ) {
-        new SimpleBar(document.getElementsByClassName('custom_scroll_bar'));
-    }
 });

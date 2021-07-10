@@ -241,7 +241,9 @@ $( document ).ready(function() {
         });
     }
 
-    
+    // if ( $('.custom_scroll_bar') ) {
+    //     new SimpleBar(document.getElementsByClassName('custom_scroll_bar'));
+    // }
 
 
 
@@ -253,10 +255,6 @@ $( document ).ready(function() {
     })
 
     $('.add_loc_group').click(function(){
-        $(this).siblings('#locations_group_0').clone(true).insertAfter('.locations_group');
+        $(this).siblings('.locations_group').last().clone(true).insertAfter('.locations_group');
     })
-
-    if ( $('.custom_scroll_bar') ) {
-        new SimpleBar(document.getElementsByClassName('custom_scroll_bar'));
-    }
 });
