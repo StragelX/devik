@@ -1783,7 +1783,7 @@ footer {
 }
 
 #who_we_are {
-  margin-top: 200px;
+  padding-top: 200px;
 
   .img_1 {
     z-index: 1;
@@ -4920,4 +4920,12 @@ footer {
       }
     }
   }
+}
+
+.animation {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 800px;
+  max-width: unset;
 }
