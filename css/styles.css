@@ -3351,6 +3351,7 @@ footer .bottom_prat .copyright {
 #clients_call {
   padding-top: 200px;
   margin-bottom: 200px;
+  display: none;
 }
 
 @media all and (max-width: 1025px) {
