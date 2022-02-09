@@ -6281,12 +6281,4 @@ footer .bottom_prat .copyright {
     margin-right: 12px;
   }
 }
-
-.animation {
-  position: absolute;
-  top: -50px;
-  right: 0;
-  width: 800px;
-  max-width: unset;
-}
 /*# sourceMappingURL=styles.css.map */
